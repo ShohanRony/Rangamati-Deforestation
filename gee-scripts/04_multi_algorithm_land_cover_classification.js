@@ -2,11 +2,9 @@
 // PROJECT: Deforestation Monitoring - Rangamati
 // Script 04: Multi-Algorithm Land Cover Classification
 // Researcher: Shohinur Pervez Shohan, RMSTU
-// Classifiers: Random Forest (500 trees), CART, SVM (RBF kernel)
-// Validation:  Spatial-block holdout (0.1 deg blocks, 30% test split)
-// Note: WorldCover/NDVI labels are provisional reference labels,
-//       not field-verified truth. Audit against historical imagery
-//       before citing results in a publication.
+// Classes: 5 (Dense Forest, Degraded Forest/Shrub, Water,
+//             Agriculture/Settlement, Bare Land)
+// Validation: Spatial-block holdout (0.1 deg blocks, 30% test)
 // ============================================================
 
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
@@ -19,7 +17,6 @@ Map.addLayer(studyArea, {color: 'white'}, 'Study area');
 // ---------------------------------------------------------------------------
 function maskAndScale(img) {
   var qa = img.select('QA_PIXEL');
-  // QA_PIXEL bits: 1=dilated cloud, 3=cloud, 4=cloud shadow, 5=snow.
   var clear = qa.bitwiseAnd(1 << 1).eq(0)
     .and(qa.bitwiseAnd(1 << 3).eq(0))
     .and(qa.bitwiseAnd(1 << 4).eq(0))
@@ -31,52 +28,54 @@ function maskAndScale(img) {
     .copyProperties(img, img.propertyNames());
 }
 
-// Roy et al. (2016) coefficients: convert OLI reflectance to ETM+-like
-// reflectance before using the same feature names across sensors.
+// Roy et al. (2016): OLI -> ETM+ harmonization
 function harmonizeL8(img) {
-  var slopes = ee.Image.constant([0.8850, 0.9317, 0.9372, 0.8339, 0.8639, 0.9165]);
-  var intercepts = ee.Image.constant([0.0183, 0.0123, 0.0123, 0.0448, 0.0306, 0.0116]);
-  var l8 = img.select(['SR_B2','SR_B3','SR_B4','SR_B5','SR_B6','SR_B7']);
+  var slopes     = ee.Image.constant([0.8850,0.9317,0.9372,0.8339,0.8639,0.9165]);
+  var intercepts = ee.Image.constant([0.0183,0.0123,0.0123,0.0448,0.0306,0.0116]);
+  var l8  = img.select(['SR_B2','SR_B3','SR_B4','SR_B5','SR_B6','SR_B7']);
   var out = l8.multiply(slopes).add(intercepts)
-    .rename(['Blue','Green','Red','NIR','SWIR1','SWIR2']);
+              .rename(['Blue','Green','Red','NIR','SWIR1','SWIR2']);
   return out.copyProperties(img, img.propertyNames());
 }
 
 function addIndices(img) {
-  var ndvi = img.normalizedDifference(['NIR', 'Red']).rename('NDVI');
-  var ndwi = img.normalizedDifference(['Green', 'NIR']).rename('NDWI');
-  var evi = img.expression(
-    '2.5 * ((nir - red) / (nir + 6 * red - 7.5 * blue + 1))', {
-      nir: img.select('NIR'), red: img.select('Red'), blue: img.select('Blue')
-    }).rename('EVI');
-  var nbr = img.normalizedDifference(['NIR', 'SWIR2']).rename('NBR');
+  var ndvi = img.normalizedDifference(['NIR','Red']).rename('NDVI');
+  var ndwi = img.normalizedDifference(['Green','NIR']).rename('NDWI');
+  var evi  = img.expression(
+    '2.5*((nir-red)/(nir+6*red-7.5*blue+1))',
+    {nir:img.select('NIR'),red:img.select('Red'),blue:img.select('Blue')}
+  ).rename('EVI');
+  var nbr  = img.normalizedDifference(['NIR','SWIR2']).rename('NBR');
   return img.addBands([ndvi, ndwi, evi, nbr]);
 }
 
 function makeL57Composite(year) {
-  var col = ee.ImageCollection('LANDSAT/LT05/C02/T1_L2')
+  return ee.ImageCollection('LANDSAT/LT05/C02/T1_L2')
     .merge(ee.ImageCollection('LANDSAT/LE07/C02/T1_L2'))
-    .filterBounds(studyArea).filterDate(year + '-01-01', year + '-05-01')
-    .filter(ee.Filter.lt('CLOUD_COVER', 70)).map(maskAndScale)
+    .filterBounds(studyArea)
+    .filterDate(year + '-01-01', year + '-05-01')
+    .filter(ee.Filter.lt('CLOUD_COVER', 70))
+    .map(maskAndScale)
     .map(function(img) {
       return img.select(['SR_B1','SR_B2','SR_B3','SR_B4','SR_B5','SR_B7'])
-        .rename(['Blue','Green','Red','NIR','SWIR1','SWIR2']);
-    }).map(addIndices);
-  return col.median().clip(studyArea).set('year', year);
+                .rename(['Blue','Green','Red','NIR','SWIR1','SWIR2']);
+    })
+    .map(addIndices)
+    .median().clip(studyArea).set('year', year);
 }
 
 function makeL8Composite(year) {
-  var col = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
+  return ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
     .filterBounds(studyArea)
-    .filterDate(year + '-01-01', year + '-12-31')  // full year for 2013
+    .filterDate(year + '-01-01', year + '-05-01')
     .filter(ee.Filter.lt('CLOUD_COVER', 70))
-    .map(maskAndScale).map(harmonizeL8).map(addIndices);
-  return col.median().clip(studyArea).set('year', year);
+    .map(maskAndScale).map(harmonizeL8).map(addIndices)
+    .median().clip(studyArea).set('year', year);
 }
 
-var srtm = ee.Image('USGS/SRTMGL1_003').clip(studyArea);
+var srtm    = ee.Image('USGS/SRTMGL1_003').clip(studyArea);
 var terrain = srtm.rename('elevation')
-  .addBands(ee.Terrain.slope(srtm).rename('slope'));
+                  .addBands(ee.Terrain.slope(srtm).rename('slope'));
 function withTerrain(img) { return img.addBands(terrain); }
 
 var composite1993 = withTerrain(makeL57Composite(1993));
@@ -91,63 +90,76 @@ var featureBands = ['Blue','Green','Red','NIR','SWIR1','SWIR2',
                     'NDVI','NDWI','EVI','NBR','elevation','slope'];
 
 // ---------------------------------------------------------------------------
-// Provisional labels (must be audited against historical imagery)
+// Class map — 5 classes
+// 1=Dense Forest  2=Degraded Forest/Shrub/Grass  3=Water
+// 4=Agriculture/Settlement  5=Bare Land
 // ---------------------------------------------------------------------------
 var worldcover = ee.ImageCollection('ESA/WorldCover/v200').first().clip(studyArea);
-var ndvi2023 = composite2023.select('NDVI');
-var tree = worldcover.eq(10);
-var dense = tree.and(ndvi2023.gte(0.55));
+var ndvi2023   = composite2023.select('NDVI');
+var tree       = worldcover.eq(10);
+
+var dense    = tree.and(ndvi2023.gte(0.55));
 var degraded = tree.and(ndvi2023.gte(0.25).and(ndvi2023.lt(0.55)))
-  .or(worldcover.eq(20)).or(worldcover.eq(30));
+                   .or(worldcover.eq(20)).or(worldcover.eq(30));
 
-// 1=dense forest, 2=degraded forest/shrub/grass, 3=water,
-// 4=agriculture/built-up, 5=bare/sparse vegetation.
-var classMap = ee.Image(0)
-  .where(dense, 1).where(degraded, 2)
-  .where(worldcover.eq(80), 3)
+var rawMap = ee.Image(0)
+  .where(dense,                                   1)
+  .where(degraded,                                2)
+  .where(worldcover.eq(80),                       3)
   .where(worldcover.eq(40).or(worldcover.eq(50)), 4)
-  .where(worldcover.eq(60), 5)
-  .updateMask(ee.Image(0).where(dense, 1).where(degraded, 2)
-    .where(worldcover.eq(80), 3)
-    .where(worldcover.eq(40).or(worldcover.eq(50)), 4)
-    .where(worldcover.eq(60), 5).neq(0))
-  .rename('landcover');
+  .where(worldcover.eq(60),                       5);
 
+var classMap = rawMap.updateMask(rawMap.neq(0)).rename('landcover');
+
+// ---------------------------------------------------------------------------
+// Stratified random sampling (150 pts/class, seed=42)
+// ---------------------------------------------------------------------------
 var samples = classMap.stratifiedSample({
   numPoints: 150, classBand: 'landcover', region: studyArea,
   scale: 30, seed: 42, geometries: true, tileScale: 4
 });
 
-// Assign a 0.1-degree spatial block. The block, not the pixel, is the split
-// unit, so nearby pixels cannot appear in both train and validation sets.
+print('Total samples:', samples.size());
+print('Per-class distribution:', samples.aggregate_histogram('landcover'));
+print('Class legend: 1=Dense Forest | 2=Degraded/Shrub | 3=Water | 4=Agri/Settlement | 5=Bare Land');
+
+// ---------------------------------------------------------------------------
+// Spatial block assignment (0.1 deg, folds 0-6 train / 7-9 test)
+// ---------------------------------------------------------------------------
 samples = samples.map(function(f) {
-  var c = f.geometry().coordinates();
-  var bx = ee.Number(c.get(0)).multiply(10).floor();
-  var by = ee.Number(c.get(1)).multiply(10).floor();
+  var c     = f.geometry().coordinates();
+  var bx    = ee.Number(c.get(0)).multiply(10).floor();
+  var by    = ee.Number(c.get(1)).multiply(10).floor();
   var block = bx.multiply(10000).add(by);
-  return f.set('block_id', block).set('block_fold', block.abs().mod(10));
+  return f.set('block_id', block, 'block_fold', block.abs().mod(10));
 });
+
 var sampled = composite2023.select(featureBands).sampleRegions({
-  collection: samples, properties: ['landcover','block_id','block_fold'],
+  collection: samples,
+  properties: ['landcover','block_id','block_fold'],
   scale: 30, tileScale: 8, geometries: true
 }).filter(ee.Filter.notNull(featureBands));
+
 var trainSet = sampled.filter(ee.Filter.lt('block_fold', 7));
-var testSet = sampled.filter(ee.Filter.gte('block_fold', 7));
-print('Spatial-block training samples:', trainSet.size());
-print('Spatial-block validation samples:', testSet.size());
-print('Class distribution:', sampled.aggregate_histogram('landcover'));
+var testSet  = sampled.filter(ee.Filter.gte('block_fold', 7));
+
+print('Training samples:', trainSet.size());
+print('Validation samples:', testSet.size());
 print('Training class distribution:', trainSet.aggregate_histogram('landcover'));
 print('Validation class distribution:', testSet.aggregate_histogram('landcover'));
 
 // ---------------------------------------------------------------------------
-// SVM standardisation (parameters are fitted on training blocks only)
+// SVM z-score standardisation (fitted on training set only)
 // ---------------------------------------------------------------------------
 var zBands = featureBands.map(function(b) { return b + '_z'; });
-var means = featureBands.map(function(b) { return ee.Number(trainSet.aggregate_mean(b)); });
+var means  = featureBands.map(function(b) {
+  return ee.Number(trainSet.aggregate_mean(b));
+});
 var sds = featureBands.map(function(b) {
   return ee.Number(trainSet.aggregate_total_sd(b)).max(0.000001);
 });
-function standardizeFeatureCollection(fc) {
+
+function standardizeFC(fc) {
   return fc.map(function(f) {
     var vals = featureBands.map(function(b, i) {
       return ee.Number(f.get(b)).subtract(means[i]).divide(sds[i]);
@@ -155,119 +167,131 @@ function standardizeFeatureCollection(fc) {
     return f.set(ee.Dictionary.fromLists(zBands, vals));
   });
 }
-function standardizedImage(img) {
+
+function standardizeImg(img) {
   var bands = featureBands.map(function(b, i) {
-    return img.select(b).subtract(ee.Image.constant(means[i]))
-      .divide(ee.Image.constant(sds[i])).rename(b + '_z');
+    return img.select(b)
+      .subtract(ee.Image.constant(means[i]))
+      .divide(ee.Image.constant(sds[i]))
+      .rename(b + '_z');
   });
   return ee.Image.cat(bands);
 }
-var trainZ = standardizeFeatureCollection(trainSet);
-var testZ = standardizeFeatureCollection(testSet);
+
+var trainZ = standardizeFC(trainSet);
+var testZ  = standardizeFC(testSet);
 
 // ---------------------------------------------------------------------------
-// Classifiers
+// Train classifiers
 // ---------------------------------------------------------------------------
 var rf = ee.Classifier.smileRandomForest({numberOfTrees: 500, seed: 42})
-  .train({features: trainSet, classProperty: 'landcover', inputProperties: featureBands});
+  .train({features: trainSet, classProperty: 'landcover',
+          inputProperties: featureBands});
+
 var cart = ee.Classifier.smileCart(50, 3)
-  .train({features: trainSet, classProperty: 'landcover', inputProperties: featureBands});
+  .train({features: trainSet, classProperty: 'landcover',
+          inputProperties: featureBands});
+
 var svm = ee.Classifier.libsvm({kernelType: 'RBF', gamma: 0.05, cost: 10})
-  .train({features: trainZ, classProperty: 'landcover', inputProperties: zBands});
+  .train({features: trainZ, classProperty: 'landcover',
+          inputProperties: zBands});
 
-var rfMatrix = testSet.classify(rf).errorMatrix('landcover', 'classification');
+// ---------------------------------------------------------------------------
+// Spatial-block validation
+// ---------------------------------------------------------------------------
+var rfMatrix   = testSet.classify(rf).errorMatrix('landcover', 'classification');
 var cartMatrix = testSet.classify(cart).errorMatrix('landcover', 'classification');
-var svmMatrix = testZ.classify(svm).errorMatrix('landcover', 'classification');
-print('SPATIAL-BLOCK VALIDATION (not random-pixel CV)');
-print('RF accuracy / kappa:', rfMatrix.accuracy(), rfMatrix.kappa());
-print('CART accuracy / kappa:', cartMatrix.accuracy(), cartMatrix.kappa());
-print('SVM accuracy / kappa:', svmMatrix.accuracy(), svmMatrix.kappa());
-print('RF confusion matrix:', rfMatrix);
+var svmMatrix  = testZ.classify(svm).errorMatrix('landcover', 'classification');
+
+print('=== SPATIAL-BLOCK VALIDATION ===');
+print('RF   OA / Kappa:', rfMatrix.accuracy(),   rfMatrix.kappa());
+print('CART OA / Kappa:', cartMatrix.accuracy(), cartMatrix.kappa());
+print('SVM  OA / Kappa:', svmMatrix.accuracy(),  svmMatrix.kappa());
+print('RF confusion matrix:',   rfMatrix);
 print('CART confusion matrix:', cartMatrix);
-print('SVM confusion matrix:', svmMatrix);
+print('SVM confusion matrix:',  svmMatrix);
 
-var palette = ['#1a5e1a','#8db36a','#1a3cff','#ffcc00','#c8a882'];
+// ---------------------------------------------------------------------------
+// Classify 2023 + visualize
+// ---------------------------------------------------------------------------
+var rfClassified2023 = composite2023.select(featureBands).classify(rf);
+
+var palette  = ['#1a5e1a','#8db36a','#1a3cff','#ffcc00','#c8a882'];
 var visClass = {min: 1, max: 5, palette: palette};
-Map.addLayer(composite2023.select('NDVI'), {min: 0, max: 1, palette: ['brown','yellow','green']}, '2023 NDVI', false);
-Map.addLayer(composite2023.select(featureBands).classify(rf), visClass, 'RF 2023');
-Map.addLayer(composite2023.select(featureBands).classify(cart), visClass, 'CART 2023', false);
-Map.addLayer(standardizedImage(composite2023).classify(svm), visClass, 'SVM 2023', false);
 
-// Apply RF to the time series. Historical reference-label auditing is still
-// required before interpreting these as validated historical maps.
-var composites = [composite1993, composite1998, composite2003, composite2008,
-                  composite2013, composite2018, composite2023];
-var years = [1993, 1998, 2003, 2008, 2013, 2018, 2023];
+Map.addLayer(composite2023.select('NDVI'),
+  {min:0, max:1, palette:['brown','yellow','green']}, 'NDVI 2023', false);
+Map.addLayer(rfClassified2023, visClass, 'RF 2023');
+Map.addLayer(composite2023.select(featureBands).classify(cart), visClass, 'CART 2023', false);
+Map.addLayer(standardizeImg(composite2023).classify(svm), visClass, 'SVM 2023', false);
+
+// ---------------------------------------------------------------------------
+// Apply RF to full time series + forest area by year
+// ---------------------------------------------------------------------------
+var composites = [composite1993, composite1998, composite2003,
+                  composite2008, composite2013, composite2018, composite2023];
+var years      = [1993, 1998, 2003, 2008, 2013, 2018, 2023];
+
 var classified = composites.map(function(img) {
   return img.select(featureBands).classify(rf).set('year', img.get('year'));
 });
+
 var areaFeatures = years.map(function(year, i) {
   var forest = classified[i].eq(1).or(classified[i].eq(2));
-  var area = forest.multiply(ee.Image.pixelArea()).reduceRegion({
-    reducer: ee.Reducer.sum(), geometry: studyArea, scale: 30,
-    maxPixels: 1e10, tileScale: 4
+  var area   = forest.multiply(ee.Image.pixelArea()).reduceRegion({
+    reducer: ee.Reducer.sum(), geometry: studyArea.geometry(),
+    scale: 30, maxPixels: 1e10, tileScale: 4
   });
-  return ee.Feature(null, {year: year,
-    forest_area_km2: ee.Number(area.get('classification')).divide(1e6)});
+  return ee.Feature(null, {
+    year: year,
+    forest_area_km2: ee.Number(area.get('classification')).divide(1e6)
+  });
 });
-print('Forest area by year (provisional):', ee.FeatureCollection(areaFeatures))
 
-// ============================================================
-// EXPORT: Confusion Matrices + Class Areas (for Olofsson analysis)
-// ============================================================
+print('Forest area by year:', ee.FeatureCollection(areaFeatures));
 
-// --- Store 2023 RF classified image as variable ---
-var rfClassified2023 = composite2023.select(featureBands).classify(rf);
-
-// --- Export RF confusion matrix ---
+// ---------------------------------------------------------------------------
+// EXPORT: Confusion matrices + class areas (for Olofsson analysis)
+// ---------------------------------------------------------------------------
 Export.table.toDrive({
   collection: ee.FeatureCollection([ee.Feature(null, {
     'classifier': 'RF',
-    'OA':         rfMatrix.accuracy(),
-    'kappa':      rfMatrix.kappa(),
-    'matrix':     rfMatrix.array()
+    'OA':    rfMatrix.accuracy(),
+    'kappa': rfMatrix.kappa(),
+    'matrix': rfMatrix.array()
   })]),
   description: 'RF_ConfusionMatrix_Spatial_Block',
-  fileFormat:  'CSV',
-  folder:      'Rangamati_Deforestation'
+  fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
 
-// --- Export CART confusion matrix ---
 Export.table.toDrive({
   collection: ee.FeatureCollection([ee.Feature(null, {
     'classifier': 'CART',
-    'OA':         cartMatrix.accuracy(),
-    'kappa':      cartMatrix.kappa(),
-    'matrix':     cartMatrix.array()
+    'OA':    cartMatrix.accuracy(),
+    'kappa': cartMatrix.kappa(),
+    'matrix': cartMatrix.array()
   })]),
   description: 'CART_ConfusionMatrix_Spatial_Block',
-  fileFormat:  'CSV',
-  folder:      'Rangamati_Deforestation'
+  fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
 
-// --- Export SVM confusion matrix ---
 Export.table.toDrive({
   collection: ee.FeatureCollection([ee.Feature(null, {
     'classifier': 'SVM',
-    'OA':         svmMatrix.accuracy(),
-    'kappa':      svmMatrix.kappa(),
-    'matrix':     svmMatrix.array()
+    'OA':    svmMatrix.accuracy(),
+    'kappa': svmMatrix.kappa(),
+    'matrix': svmMatrix.array()
   })]),
   description: 'SVM_ConfusionMatrix_Spatial_Block',
-  fileFormat:  'CSV',
-  folder:      'Rangamati_Deforestation'
+  fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
 
-// --- Export mapped area per class (2023 RF) for Olofsson calculation ---
 var classAreas2023 = ee.List([1,2,3,4,5]).map(function(c) {
   var area = rfClassified2023.eq(ee.Number(c))
     .multiply(ee.Image.pixelArea())
     .reduceRegion({
-      reducer:   ee.Reducer.sum(),
-      geometry:  studyArea.geometry(),
-      scale:     30,
-      maxPixels: 1e10,
-      tileScale: 4
+      reducer: ee.Reducer.sum(), geometry: studyArea.geometry(),
+      scale: 30, maxPixels: 1e10, tileScale: 4
     });
   return ee.Feature(null, {
     'class':    c,
@@ -278,6 +302,5 @@ var classAreas2023 = ee.List([1,2,3,4,5]).map(function(c) {
 Export.table.toDrive({
   collection: ee.FeatureCollection(classAreas2023),
   description: 'RF_MappedArea_PerClass_2023',
-  fileFormat:  'CSV',
-  folder:      'Rangamati_Deforestation'
+  fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
