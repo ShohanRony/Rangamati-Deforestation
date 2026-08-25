@@ -8,6 +8,7 @@
 //       not field-verified truth. Audit against historical imagery
 //       before citing results in a publication.
 // ============================================================
+
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
   .filter(ee.Filter.eq('NAME_2', 'Parbattya Chattagram'));
 Map.centerObject(studyArea, 9);
@@ -210,3 +211,73 @@ var areaFeatures = years.map(function(year, i) {
     forest_area_km2: ee.Number(area.get('classification')).divide(1e6)});
 });
 print('Forest area by year (provisional):', ee.FeatureCollection(areaFeatures))
+
+// ============================================================
+// EXPORT: Confusion Matrices + Class Areas (for Olofsson analysis)
+// ============================================================
+
+// --- Store 2023 RF classified image as variable ---
+var rfClassified2023 = composite2023.select(featureBands).classify(rf);
+
+// --- Export RF confusion matrix ---
+Export.table.toDrive({
+  collection: ee.FeatureCollection([ee.Feature(null, {
+    'classifier': 'RF',
+    'OA':         rfMatrix.accuracy(),
+    'kappa':      rfMatrix.kappa(),
+    'matrix':     rfMatrix.array()
+  })]),
+  description: 'RF_ConfusionMatrix_Spatial_Block',
+  fileFormat:  'CSV',
+  folder:      'Rangamati_Deforestation'
+});
+
+// --- Export CART confusion matrix ---
+Export.table.toDrive({
+  collection: ee.FeatureCollection([ee.Feature(null, {
+    'classifier': 'CART',
+    'OA':         cartMatrix.accuracy(),
+    'kappa':      cartMatrix.kappa(),
+    'matrix':     cartMatrix.array()
+  })]),
+  description: 'CART_ConfusionMatrix_Spatial_Block',
+  fileFormat:  'CSV',
+  folder:      'Rangamati_Deforestation'
+});
+
+// --- Export SVM confusion matrix ---
+Export.table.toDrive({
+  collection: ee.FeatureCollection([ee.Feature(null, {
+    'classifier': 'SVM',
+    'OA':         svmMatrix.accuracy(),
+    'kappa':      svmMatrix.kappa(),
+    'matrix':     svmMatrix.array()
+  })]),
+  description: 'SVM_ConfusionMatrix_Spatial_Block',
+  fileFormat:  'CSV',
+  folder:      'Rangamati_Deforestation'
+});
+
+// --- Export mapped area per class (2023 RF) for Olofsson calculation ---
+var classAreas2023 = ee.List([1,2,3,4,5]).map(function(c) {
+  var area = rfClassified2023.eq(ee.Number(c))
+    .multiply(ee.Image.pixelArea())
+    .reduceRegion({
+      reducer:   ee.Reducer.sum(),
+      geometry:  studyArea.geometry(),
+      scale:     30,
+      maxPixels: 1e10,
+      tileScale: 4
+    });
+  return ee.Feature(null, {
+    'class':    c,
+    'area_km2': ee.Number(area.get('classification')).divide(1e6)
+  });
+});
+
+Export.table.toDrive({
+  collection: ee.FeatureCollection(classAreas2023),
+  description: 'RF_MappedArea_PerClass_2023',
+  fileFormat:  'CSV',
+  folder:      'Rangamati_Deforestation'
+});
