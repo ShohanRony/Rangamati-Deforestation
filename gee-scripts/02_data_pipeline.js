@@ -1,6 +1,9 @@
 // ================================================
 // PROJECT: Deforestation Monitoring - Rangamati
-// Script 02: Full Data Pipeline (Week 2) - FIXED
+// Script 02: Full Data Pipeline
+// Researcher: Shohinur Pervez Shohan, RMSTU
+// Purpose: Build multi-year Landsat composites (1993-2023) with
+//          spectral indices and NDVI change detection.
 // ================================================
 
 var bgd = ee.FeatureCollection(
