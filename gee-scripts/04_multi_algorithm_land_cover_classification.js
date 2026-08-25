@@ -1,16 +1,13 @@
-// SCRIPT 04 (fair revision): multi-algorithm land-cover classification
-// Rangamati, Bangladesh
-//
-// Main safeguards added in this revision:
-//   1) pixel-level Landsat cloud/shadow/saturation masking;
-//   2) common TM-equivalent band names and documented L8->ETM+ harmonization;
-//   3) spatial-block holdout validation (no random-pixel leakage);
-//   4) feature standardisation for SVM only (fit on training blocks);
-//   5) reproducible, explicitly documented WorldCover-derived labels.
-//
-// IMPORTANT: WorldCover/NDVI labels are provisional reference labels, not
-// field truth. For a paper, replace or audit them with historical imagery.
-
+// ============================================================
+// PROJECT: Deforestation Monitoring - Rangamati
+// Script 04: Multi-Algorithm Land Cover Classification
+// Researcher: Shohinur Pervez Shohan, RMSTU
+// Classifiers: Random Forest (500 trees), CART, SVM (RBF kernel)
+// Validation:  Spatial-block holdout (0.1 deg blocks, 30% test split)
+// Note: WorldCover/NDVI labels are provisional reference labels,
+//       not field-verified truth. Audit against historical imagery
+//       before citing results in a publication.
+// ============================================================
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
   .filter(ee.Filter.eq('NAME_2', 'Parbattya Chattagram'));
 Map.centerObject(studyArea, 9);
