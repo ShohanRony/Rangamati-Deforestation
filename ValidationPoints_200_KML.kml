@@ -1,0 +1,6606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>0</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>0</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.19584932399053,23.62753351867586 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>1</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>1</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.52463271797828,22.1644474154304 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>2</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>2</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.32143380071044,22.96376835523995 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>3</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>3</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.56882982995695,22.182234058055965 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>4</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>4</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.10098722998751,23.581180450015296 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>5</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>5</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.31846936027284,23.126543084722407 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>6</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>6</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.30930654437483,23.01119940224146 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>7</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>7</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.42141629183294,22.598333697660127 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>8</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>8</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.53649047972866,22.394595791221818 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>9</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>9</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.29879625555063,23.122500665943868 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>10</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>10</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23869896304303,23.197959149809908 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>11</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>11</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.31981683319903,23.48658785059751 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>12</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>12</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.32116430612521,22.966732795677544 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>13</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>13</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.31092351188624,23.124387128040517 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>14</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>14</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.29421484760162,23.033567452816033 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>15</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>15</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.11715690510167,22.86082142367985 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>16</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>16</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.26537892698138,23.186370882644766 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>17</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>17</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24516683308869,23.3076434460009 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>18</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>18</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21794787997987,22.76730680260301 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>19</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>19</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.39096340370129,23.255361496465145 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>20</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>20</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.36293596683676,23.187448860985707 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>21</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>21</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.0355000457752,22.741974311590837 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>22</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>22</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.09775329496468,23.067523770555752 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>23</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>23</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.29475383677209,22.903940557317586 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>24</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>24</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.53622098514342,22.1862764768345 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>25</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>25</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.16350997376223,23.501140558200245 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>26</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>26</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.11203650798218,22.657622506412014 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>27</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>27</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.26349246488473,23.164811315825897 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>28</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>28</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.28720798838549,23.04030481744693 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>29</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>29</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.51546990208026,22.4921528310772 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>30</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>30</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.33787297040983,22.425318173938706 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>31</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>31</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.2346565442645,22.428552108961537 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>32</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>32</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.5308310934387,22.52934308383975 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>33</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>33</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.27966213999888,23.221674673310662 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>34</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>34</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.29717928803922,22.917145791994145 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>35</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>35</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23142260924166,22.409956982580262 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>36</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>36</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.49633578652852,22.70155012380546 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>37</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>37</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.31200149022719,23.24458171305571 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>38</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>38</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.36131899932535,23.355074493002412 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>39</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Dense Forest</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>1</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>1</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>39</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.45294715830553,22.757604997534518 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>40</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>40</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.14114192318765,22.542548318516303 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>41</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>41</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.27588921580558,22.499968174049037 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>42</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>42</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.15246069576756,23.191760774349483 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>43</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>43</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.12847567768156,22.824709149258247 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>44</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>44</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.44836575035653,22.332612036617572 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>45</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>45</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.33221358411987,22.76003044880164 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>46</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>46</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.1077245946184,22.618006802382343 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>47</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>47</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.31038452271576,22.561412939482814 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>48</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>48</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20501213988855,22.37680914859625 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>49</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>49</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.4383944507028,22.614772867359513 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>50</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>50</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.16135401708034,23.09582070200552 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>51</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>51</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.14545383655143,22.624205177842768 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>52</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>52</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.33948993792124,23.253475034368492 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>53</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>53</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21579192329799,23.334053915354016 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>54</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>54</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.14626232030713,23.094473229079338 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>55</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>55</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22010383666176,22.732272506522346 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>56</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>56</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.52517170714874,22.43555896817767 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>57</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>57</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.10826358378888,22.68268550283895 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>58</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>58</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.11041954047077,22.682146513668478 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>59</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>59</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.1001787462318,22.673792181526167 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>60</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>60</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.33356105704605,22.62932557496225 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>61</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>61</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.16755239254077,22.999880629661554 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>62</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>62</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.2669958944928,22.784554456058103 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>63</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>63</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.42384174310007,22.784554456058103 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>64</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>64</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.44324535323705,22.882111495913485 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>65</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>65</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.42195528100342,22.52583965423168 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>66</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>66</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.11715690510167,22.60830499731385 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>67</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>67</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.2077070857409,22.79829867990513 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>68</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>68</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.43543001026521,22.79722070156419 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>69</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>69</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.10637712169223,22.60722701897291 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>70</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>70</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.41117549759399,22.47894759640064 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>71</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>71</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.37775816902473,22.970236225285607 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>72</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>72</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21390546120134,23.67307810358072 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>73</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>73</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.43785546153234,22.313477921065825 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>74</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>74</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.17941015429115,22.547668715635787 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>75</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>75</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22037333124699,23.320309691506985 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>76</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>76</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.32116430612521,23.374747597724628 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>77</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>77</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.14734029864807,22.620971242819937 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>78</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>78</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.14464535279572,23.084232434840377 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>79</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Degraded Forest / Jhum</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>2</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>2</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>79</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.34326286211454,22.446877740757575 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>80</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>80</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.18911195935964,22.58000806586409 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>81</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>81</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.27184679702704,22.513173408725596 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>82</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>82</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.19315437813817,22.9122948894599 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>83</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>83</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.18237459472874,22.69777719961216 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>84</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>84</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.3308661111937,22.709904455947772 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>85</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>85</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22172080417317,22.68915337288461 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>86</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>86</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.17051683297836,22.556023047778098 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>87</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>87</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.25702459483907,22.84195680271334 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>88</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>88</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.12281629139162,22.770271243040604 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>89</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>89</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.29852676096539,22.69696871585645 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>90</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>90</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.28235708585125,22.70855698302159 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>91</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>91</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24274138182157,22.892352290152445 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>92</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>92</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.19638831316101,22.689422867469847 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>93</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>93</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.25244318689006,22.527456621743095 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>94</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>94</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.11392297007883,22.781320521035273 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>95</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>95</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21821737456511,22.537966910567295 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>96</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>96</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20177820486572,22.57327070123319 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>97</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>97</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21902585832082,22.89935914936858 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>98</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>98</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.18237459472874,22.685110954106072 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>99</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>99</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.30580311476676,22.77161871596678 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>100</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>100</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22953614714501,22.936549402131128 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>101</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>101</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20528163447379,22.861899402020793 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>102</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>102</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.18911195935964,22.668671784406683 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>103</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>103</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.19423235647912,22.921727199943156 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>104</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>104</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21660040705369,22.85300608070801 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>105</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>105</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22252928792888,22.639296874615976 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>106</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>106</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.17402026258642,22.709634961362536 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>107</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>107</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24705329518534,22.518563300430312 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>108</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>108</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.18641701350728,22.61234741609239 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>109</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>109</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.34110690543265,22.727960593158574 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>110</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>110</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23034463090072,22.82443965467301 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>111</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>111</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20258668862142,22.911216911118956 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>112</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>112</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23142260924166,22.838992362275746 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>113</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>113</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20743759115567,22.550363661488145 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>114</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>114</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24301087640681,22.884536947180607 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>115</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>115</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.17806268136496,22.94490373427344 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>116</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>116</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24786177894106,22.789405358592347 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>117</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>117</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.1767152084388,22.555484058607625 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>118</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>118</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.3338305516313,22.710173950533008 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>119</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Water</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>3</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>3</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>119</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23384806050879,22.819049762968294 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>120</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>120</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.37263777190526,22.668132795236215 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>121</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>121</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.25675510025384,22.89262178473768 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>122</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>122</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.05490365591218,22.89208279556721 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>123</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>123</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.31550491983525,22.76973225387013 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>124</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>124</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.12254679680638,22.81150391458169 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>125</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>125</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.38557351199657,22.858126477827494 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>126</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>126</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.07188181478203,22.870792723333576 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>127</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>127</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.36967333146767,22.631751026229374 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>128</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>128</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.25513813274242,22.927656080818345 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>129</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>129</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24139390889539,22.393517812880877 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>130</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>130</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.0611020313726,22.857856983242257 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>131</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>131</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24112441431015,23.039765828276458 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>132</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>132</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.26079751903238,22.925500124136455 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>133</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>133</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.15677260913134,23.02871655028179 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>134</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>134</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.32493723031851,22.528265105498804 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>135</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>135</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.27615871039082,22.743052289931782 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>136</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>136</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23034463090072,22.961881893143296 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>137</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>137</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.00828109266638,22.630942542473665 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>138</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>138</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.24516683308869,22.973739654893674 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>139</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>139</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.3564680967911,22.897203192686693 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>140</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>140</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.11284499173789,22.837375394764333 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>141</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>141</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.01582694105298,22.579469076693616 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>142</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>142</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21228849368993,23.11064290419349 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>143</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>143</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.1362910206534,22.717450304334374 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>144</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>144</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21552242871275,23.05270156836778 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>145</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>145</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23223109299737,23.013355358923345 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>146</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>146</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.14680130947761,22.63309849915555 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>147</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>147</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.27130780785657,22.86675030455504 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>148</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>148</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.25837206776525,22.669480268162392 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>149</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>149</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.17051683297836,22.688075394543667 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>150</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>150</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21121051534898,23.123309149699576 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>151</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>151</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.21040203159326,22.917145791994145 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>152</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>152</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.2068986019852,23.079651026891366 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>153</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>153</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.16701340337029,22.938435864227777 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>154</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>154</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.25379065981625,23.003653553854853 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>155</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>155</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.15758109288704,23.32543008862647 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>156</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>156</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.12200780763591,22.820936225064944 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>157</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>157</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.2384294684578,22.78724940191046 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>158</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>158</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.42896214021955,22.70613153175447 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>159</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Agriculture / Settlement</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>4</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>4</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>159</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20555112905902,22.964307344410418 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>160</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>160</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.19423235647912,22.879416550061126 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>161</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>161</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23896845762827,22.439331892370973 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>162</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>162</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22657170670742,22.694004275418855 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>163</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>163</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.15461665244945,23.07668658645377 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>164</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>164</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.310654017301,22.716102831408197 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>165</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>165</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.12066033470973,22.754371062511687 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>166</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>166</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.1850695405811,22.71583333682296 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>167</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>167</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.27103831327133,22.641722325883098 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>168</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>168</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.37317676107573,22.59671673014871 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>169</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>169</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20258668862142,22.68187701908324 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>170</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>170</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22845816880407,23.335131893694957 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>171</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>171</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.2279191796336,22.67540914903758 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>172</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>172</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.17887116512067,23.02683008818514 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>173</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>173</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.04574084001416,22.892891279322917 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>174</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>174</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.18533903516634,22.625822145354185 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>175</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>175</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.28074011833982,22.81662431170117 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>176</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>176</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.20366466696237,22.844382253980463 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>177</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>177</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.18372206765491,23.414093807169063 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>178</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>178</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.30930654437483,22.61234741609239 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>179</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>179</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.17536773551261,23.323543626529815 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>180</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>180</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.37721917985427,22.954875033927166 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>181</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>181</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.2077070857409,22.848424672759002 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>182</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>182</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.30068271764728,22.53581095388541 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>183</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>183</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.33868145416554,22.687266910787958 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>184</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>184</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22495473919601,23.066176297629575 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>185</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>185</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.15919806039845,22.931967994182116 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>186</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>186</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.22010383666176,22.56572485284659 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>187</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>187</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.33436954080176,22.44148784905286 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>188</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>188</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.39365834955365,22.789674853177583 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>189</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>189</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.26052802444714,22.8694452504074 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>190</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>190</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.06703091224779,22.81069543082598 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>191</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>191</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.49525780818757,22.377348137766724 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>192</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>192</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.082122609021,22.88184200132825 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>193</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>193</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.11904336719832,22.63714091793409 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>194</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>194</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.06541394473638,22.88103351757254 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>195</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>195</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.28559102087407,22.783206983131922 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>196</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>196</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.26268398112903,22.747903192466026 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>197</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>197</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.23303957675309,22.589440376347344 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>198</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>198</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.40282116545167,22.91418135155655 </coordinates>
+  </Point>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='point_id'>
+      <value>199</value>
+    </Data>
+    <Data name='notes'>
+      <value></value>
+    </Data>
+    <Data name='rf_class_name'>
+      <value>Bare Land</value>
+    </Data>
+    <Data name='confidence'>
+      <value></value>
+    </Data>
+    <Data name='manual_class'>
+      <value></value>
+    </Data>
+    <Data name='classification'>
+      <value>5</value>
+    </Data>
+    <Data name='rf_class'>
+      <value>5</value>
+    </Data>
+    <Data name='manual_name'>
+      <value></value>
+    </Data>
+    <Data name='system:index'>
+      <value>199</value>
+    </Data>
+  </ExtendedData>
+  <Point>
+    <coordinates>92.36104950474011,22.893160773908154 </coordinates>
+  </Point>
+</Placemark>
+</Document>
+</kml>
