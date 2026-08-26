@@ -4,7 +4,11 @@
 // Researcher: Shohinur Pervez Shohan, RMSTU
 // Classes: 5 (Dense Forest, Degraded Forest/Shrub, Water,
 //             Agriculture/Settlement, Bare Land)
-// Validation: Spatial-block holdout (0.1 deg blocks, 30% test)
+// Validation: Spatial-block holdout (0.1 deg blocks, ~30% of blocks held out)
+//   NOTE (fixed): each 0.1-deg block is assigned WHOLLY to train or holdout
+//   via a seeded random draw on the block, not on individual points, and not
+//   via a coordinate-derived modulo (the previous block_id/mod(10) scheme
+//   collapsed to a latitude-only split — see comments below).
 // ============================================================
 
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
@@ -124,14 +128,49 @@ print('Per-class distribution:', samples.aggregate_histogram('landcover'));
 print('Class legend: 1=Dense Forest | 2=Degraded/Shrub | 3=Water | 4=Agri/Settlement | 5=Bare Land');
 
 // ---------------------------------------------------------------------------
-// Spatial block assignment (0.1 deg, folds 0-6 train / 7-9 test)
+// Spatial block assignment — FIXED
+//
+// Bug in the previous version: block_id was computed as
+//   block = bx * 10000 + by
+// and the fold was block_id.mod(10). Because 10000 is divisible by 10,
+// (bx*10000 + by) mod 10 always equals (by mod 10) — the bx (longitude)
+// term contributes nothing to the modulo. The "10 spatial blocks" were in
+// fact 10 latitude stripes; longitude played no role in the split.
+//
+// Fix: build a 0.1-deg block id from (bx, by) as before (this id is now
+// used ONLY as a block identifier, never fed into a modulo), then assign
+// each DISTINCT block — not each point — to train or holdout via a single
+// seeded random draw per block. This guarantees every point inside a given
+// 0.1-deg cell goes to the same partition, and the partition itself is a
+// genuine 2-D spatial split rather than a coordinate-derived pattern.
 // ---------------------------------------------------------------------------
 samples = samples.map(function(f) {
-  var c     = f.geometry().coordinates();
-  var bx    = ee.Number(c.get(0)).multiply(10).floor();
-  var by    = ee.Number(c.get(1)).multiply(10).floor();
-  var block = bx.multiply(10000).add(by);
-  return f.set('block_id', block, 'block_fold', block.abs().mod(10));
+  var c   = f.geometry().coordinates();
+  var bx  = ee.Number(c.get(0)).multiply(10).floor();
+  var by  = ee.Number(c.get(1)).multiply(10).floor();
+  var bid = bx.format('%d').cat('_').cat(by.format('%d'));
+  return f.set('block_id', bid);
+});
+
+// One random draw per DISTINCT block (seed=42), ~30% of blocks -> holdout.
+var uniqueBlocks = samples.distinct('block_id').randomColumn('rand', 42);
+var blockFolds = uniqueBlocks.map(function(b) {
+  var isHoldout = ee.Number(b.get('rand')).gte(0.7);
+  return b.set('block_fold', ee.Algorithms.If(isHoldout, 1, 0));
+});
+
+print('Number of distinct 0.1-deg blocks:', uniqueBlocks.size());
+print('Blocks assigned to holdout (fold=1):',
+  blockFolds.filter(ee.Filter.eq('block_fold', 1)).size());
+print('Blocks assigned to training (fold=0):',
+  blockFolds.filter(ee.Filter.eq('block_fold', 0)).size());
+
+// Join each point back to its block's fold assignment.
+var joinFilter = ee.Filter.equals({leftField: 'block_id', rightField: 'block_id'});
+var joined = ee.Join.saveFirst('blockMatch').apply(samples, blockFolds, joinFilter);
+samples = joined.map(function(f) {
+  var match = ee.Feature(f.get('blockMatch'));
+  return f.set('block_fold', match.get('block_fold'));
 });
 
 var sampled = composite2023.select(featureBands).sampleRegions({
@@ -140,11 +179,11 @@ var sampled = composite2023.select(featureBands).sampleRegions({
   scale: 30, tileScale: 8, geometries: true
 }).filter(ee.Filter.notNull(featureBands));
 
-var trainSet = sampled.filter(ee.Filter.lt('block_fold', 7));
-var testSet  = sampled.filter(ee.Filter.gte('block_fold', 7));
+var trainSet = sampled.filter(ee.Filter.eq('block_fold', 0));
+var testSet  = sampled.filter(ee.Filter.eq('block_fold', 1));
 
 print('Training samples:', trainSet.size());
-print('Validation samples:', testSet.size());
+print('Validation (holdout) samples:', testSet.size());
 print('Training class distribution:', trainSet.aggregate_histogram('landcover'));
 print('Validation class distribution:', testSet.aggregate_histogram('landcover'));
 
@@ -197,13 +236,13 @@ var svm = ee.Classifier.libsvm({kernelType: 'RBF', gamma: 0.05, cost: 10})
           inputProperties: zBands});
 
 // ---------------------------------------------------------------------------
-// Spatial-block validation
+// Spatial-block holdout validation
 // ---------------------------------------------------------------------------
 var rfMatrix   = testSet.classify(rf).errorMatrix('landcover', 'classification');
 var cartMatrix = testSet.classify(cart).errorMatrix('landcover', 'classification');
 var svmMatrix  = testZ.classify(svm).errorMatrix('landcover', 'classification');
 
-print('=== SPATIAL-BLOCK VALIDATION ===');
+print('=== SPATIAL-BLOCK HOLDOUT VALIDATION ===');
 print('RF   OA / Kappa:', rfMatrix.accuracy(),   rfMatrix.kappa());
 print('CART OA / Kappa:', cartMatrix.accuracy(), cartMatrix.kappa());
 print('SVM  OA / Kappa:', svmMatrix.accuracy(),  svmMatrix.kappa());
@@ -252,6 +291,8 @@ print('Forest area by year:', ee.FeatureCollection(areaFeatures));
 
 // ---------------------------------------------------------------------------
 // EXPORT: Confusion matrices + class areas (for Olofsson analysis)
+// Filenames suffixed "_v2" so they don't overwrite the earlier
+// (buggy-split) exports — keep both, but use only the _v2 files in the paper.
 // ---------------------------------------------------------------------------
 Export.table.toDrive({
   collection: ee.FeatureCollection([ee.Feature(null, {
@@ -260,7 +301,7 @@ Export.table.toDrive({
     'kappa': rfMatrix.kappa(),
     'matrix': rfMatrix.array()
   })]),
-  description: 'RF_ConfusionMatrix_Spatial_Block',
+  description: 'RF_ConfusionMatrix_Spatial_Block_v2',
   fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
 
@@ -271,7 +312,7 @@ Export.table.toDrive({
     'kappa': cartMatrix.kappa(),
     'matrix': cartMatrix.array()
   })]),
-  description: 'CART_ConfusionMatrix_Spatial_Block',
+  description: 'CART_ConfusionMatrix_Spatial_Block_v2',
   fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
 
@@ -282,7 +323,7 @@ Export.table.toDrive({
     'kappa': svmMatrix.kappa(),
     'matrix': svmMatrix.array()
   })]),
-  description: 'SVM_ConfusionMatrix_Spatial_Block',
+  description: 'SVM_ConfusionMatrix_Spatial_Block_v2',
   fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
 
@@ -301,6 +342,6 @@ var classAreas2023 = ee.List([1,2,3,4,5]).map(function(c) {
 
 Export.table.toDrive({
   collection: ee.FeatureCollection(classAreas2023),
-  description: 'RF_MappedArea_PerClass_2023',
+  description: 'RF_MappedArea_PerClass_2023_v2',
   fileFormat: 'CSV', folder: 'Rangamati_Deforestation'
 });
