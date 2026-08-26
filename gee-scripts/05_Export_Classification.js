@@ -7,6 +7,15 @@
 //   2. 2023 RGB composite for basemap reference
 //   3. NDVI change stack for visualization
 //   4. Forest binary mask per epoch (for area calculation in QGIS)
+//
+// FIXED (this version):
+//   Spatial-block assignment previously used block_id = bx*10000 + by,
+//   fold = block_id mod 10. Because 10000 is divisible by 10, this
+//   collapsed to a latitude-only split (bx contributed nothing). Each
+//   0.1-deg block is now assigned WHOLLY to train or holdout via a single
+//   seeded random draw per block (seed=42), matching the corrected logic
+//   in Script 04. Window (Jan 1 - Apr 30, no scene-level cloud filter) was
+//   already consistent with Scripts 07/08 and is unchanged here.
 // ================================================================
 
 // ---- STUDY AREA ----
@@ -131,16 +140,34 @@ var samples = classMap.addBands(composite2023).stratifiedSample({
   geometries: true
 });
 
-// Spatial block assignment
+// ---------------------------------------------------------------------------
+// Spatial block assignment — FIXED (see Script 04 for full explanation)
+// ---------------------------------------------------------------------------
 samples = samples.map(function(f) {
-  var c  = f.geometry().coordinates();
-  var bx = ee.Number(c.get(0)).multiply(10).floor();
-  var by = ee.Number(c.get(1)).multiply(10).floor();
-  var block = bx.multiply(10000).add(by);
-  return f.set('block_id', block).set('block_fold', block.abs().mod(10));
+  var c   = f.geometry().coordinates();
+  var bx  = ee.Number(c.get(0)).multiply(10).floor();
+  var by  = ee.Number(c.get(1)).multiply(10).floor();
+  var bid = bx.format('%d').cat('_').cat(by.format('%d'));
+  return f.set('block_id', bid);
 });
 
-var trainSet = samples.filter(ee.Filter.lt('block_fold', 7));
+var uniqueBlocks = samples.distinct('block_id').randomColumn('rand', 42);
+var blockFolds = uniqueBlocks.map(function(b) {
+  var isHoldout = ee.Number(b.get('rand')).gte(0.7);
+  return b.set('block_fold', ee.Algorithms.If(isHoldout, 1, 0));
+});
+
+var joinFilter = ee.Filter.equals({leftField: 'block_id', rightField: 'block_id'});
+var joined = ee.Join.saveFirst('blockMatch').apply(samples, blockFolds, joinFilter);
+samples = joined.map(function(f) {
+  var match = ee.Feature(f.get('blockMatch'));
+  return f.set('block_fold', match.get('block_fold'));
+});
+
+var trainSet = samples.filter(ee.Filter.eq('block_fold', 0));
+
+print('Distinct blocks:', ee.FeatureCollection(uniqueBlocks).size());
+print('Training samples (this export run):', trainSet.size());
 
 // Train RF classifier
 var rf = ee.Classifier.smileRandomForest({numberOfTrees: 500, seed: 42})
@@ -162,35 +189,35 @@ var classVis = {
 epochs.forEach(function(ep) {
   var composite  = buildComposite(ep);
   var classified = composite.classify(rf);
-  
+
   // --- Export classified GeoTIFF ---
   Export.image.toDrive({
     image:       classified,
-    description: 'RF_Classified_' + ep.year,
+    description: 'RF_Classified_' + ep.year + '_v2',
     folder:      'Rangamati_Deforestation',
-    fileNamePrefix: 'RF_Classified_' + ep.year,
+    fileNamePrefix: 'RF_Classified_' + ep.year + '_v2',
     region:      roi,
     scale:       30,
     crs:         'EPSG:32646',  // UTM Zone 46N — proper for Rangamati
     maxPixels:   1e10,
     fileFormat:  'GeoTIFF'
   });
-  
+
   // --- Export forest binary mask (1=Forest, 0=Non-forest) ---
   var forestMask = classified.lte(2).selfMask();  // classes 1+2 = forest
   Export.image.toDrive({
     image:       forestMask.rename('forest'),
-    description: 'Forest_Mask_' + ep.year,
+    description: 'Forest_Mask_' + ep.year + '_v2',
     folder:      'Rangamati_Deforestation',
-    fileNamePrefix: 'Forest_Mask_' + ep.year,
+    fileNamePrefix: 'Forest_Mask_' + ep.year + '_v2',
     region:      roi,
     scale:       30,
     crs:         'EPSG:32646',
     maxPixels:   1e10,
     fileFormat:  'GeoTIFF'
   });
-  
-  print('Export submitted: RF_Classified_' + ep.year);
+
+  print('Export submitted: RF_Classified_' + ep.year + '_v2');
 });
 
 // ================================================================
@@ -206,9 +233,9 @@ var composite2023vis = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
 
 Export.image.toDrive({
   image:          composite2023vis.select(['Red','Green','Blue']).multiply(3.5).clamp(0,1),
-  description:    'Composite_2023_TrueColor',
+  description:    'Composite_2023_TrueColor_v2',
   folder:         'Rangamati_Deforestation',
-  fileNamePrefix: 'Composite_2023_TrueColor',
+  fileNamePrefix: 'Composite_2023_TrueColor_v2',
   region:         roi,
   scale:          30,
   crs:            'EPSG:32646',
@@ -231,9 +258,9 @@ var ndviChange = composite2023.select('NDVI')
 
 Export.image.toDrive({
   image:          ndviChange,
-  description:    'NDVI_Change_1993_2023',
+  description:    'NDVI_Change_1993_2023_v2',
   folder:         'Rangamati_Deforestation',
-  fileNamePrefix: 'NDVI_Change_1993_2023',
+  fileNamePrefix: 'NDVI_Change_1993_2023_v2',
   region:         roi,
   scale:          30,
   crs:            'EPSG:32646',
