@@ -53,12 +53,19 @@ function addIndices(img) {
   return img.addBands([ndvi, ndwi, evi, nbr]);
 }
 
+// NOTE (standardized): window and filter now match Scripts 05/07/08 exactly —
+// January 1 - April 30, no separate scene-level CLOUD_COVER pre-filter.
+// Cloud/shadow contamination is instead handled entirely at the pixel level
+// via QA_PIXEL + QA_RADSAT masking (maskAndScale, above) combined with
+// median compositing. This used to be Jan 1 - May 1 with CLOUD_COVER < 70,
+// which meant Script 04's classifier comparison was NOT evaluated on the
+// same composite actually used for production (Script 05) — that mismatch
+// is now removed.
 function makeL57Composite(year) {
   return ee.ImageCollection('LANDSAT/LT05/C02/T1_L2')
     .merge(ee.ImageCollection('LANDSAT/LE07/C02/T1_L2'))
     .filterBounds(studyArea)
-    .filterDate(year + '-01-01', year + '-05-01')
-    .filter(ee.Filter.lt('CLOUD_COVER', 70))
+    .filterDate(year + '-01-01', year + '-04-30')
     .map(maskAndScale)
     .map(function(img) {
       return img.select(['SR_B1','SR_B2','SR_B3','SR_B4','SR_B5','SR_B7'])
@@ -71,8 +78,7 @@ function makeL57Composite(year) {
 function makeL8Composite(year) {
   return ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
     .filterBounds(studyArea)
-    .filterDate(year + '-01-01', year + '-05-01')
-    .filter(ee.Filter.lt('CLOUD_COVER', 70))
+    .filterDate(year + '-01-01', year + '-04-30')
     .map(maskAndScale).map(harmonizeL8).map(addIndices)
     .median().clip(studyArea).set('year', year);
 }
@@ -98,7 +104,10 @@ var featureBands = ['Blue','Green','Red','NIR','SWIR1','SWIR2',
 // 1=Dense Forest  2=Degraded Forest/Shrub/Grass  3=Water
 // 4=Agriculture/Settlement  5=Bare Land
 // ---------------------------------------------------------------------------
-var worldcover = ee.ImageCollection('ESA/WorldCover/v200').first().clip(studyArea);
+// NOTE (standardized): explicit versioned asset id, matching Scripts 05/07/08
+// exactly (same underlying dataset as ee.ImageCollection('ESA/WorldCover/v200').first(),
+// but pinned so the exact version is unambiguous and citable in the paper).
+var worldcover = ee.Image('ESA/WorldCover/v200/2021').select('Map').clip(studyArea);
 var ndvi2023   = composite2023.select('NDVI');
 var tree       = worldcover.eq(10);
 
