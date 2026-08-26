@@ -2,6 +2,10 @@
 // RANGAMATI DEFORESTATION MONITORING
 // Script 07: Class Area Calculation for Olofsson Accuracy
 // NO EXPORTS — Console output only
+//
+// FIXED (this version): spatial-block assignment corrected — see Script 04
+// for full explanation of the bx*10000+by mod 10 bug. Each 0.1-deg block is
+// now assigned wholly to train or holdout via a seeded random draw per block.
 // ================================================================
 
 // ---- STUDY AREA ----
@@ -91,15 +95,33 @@ var samples = classMap.addBands(composite2023).stratifiedSample({
   geometries: true
 });
 
+// ---------------------------------------------------------------------------
+// Spatial block assignment — FIXED (see Script 04 for full explanation)
+// ---------------------------------------------------------------------------
 samples = samples.map(function(f) {
-  var c  = f.geometry().coordinates();
-  var bx = ee.Number(c.get(0)).multiply(10).floor();
-  var by = ee.Number(c.get(1)).multiply(10).floor();
-  var block = bx.multiply(10000).add(by);
-  return f.set('block_id', block).set('block_fold', block.abs().mod(10));
+  var c   = f.geometry().coordinates();
+  var bx  = ee.Number(c.get(0)).multiply(10).floor();
+  var by  = ee.Number(c.get(1)).multiply(10).floor();
+  var bid = bx.format('%d').cat('_').cat(by.format('%d'));
+  return f.set('block_id', bid);
 });
 
-var trainSet = samples.filter(ee.Filter.lt('block_fold', 7));
+var uniqueBlocks = samples.distinct('block_id').randomColumn('rand', 42);
+var blockFolds = uniqueBlocks.map(function(b) {
+  var isHoldout = ee.Number(b.get('rand')).gte(0.7);
+  return b.set('block_fold', ee.Algorithms.If(isHoldout, 1, 0));
+});
+
+var joinFilter = ee.Filter.equals({leftField: 'block_id', rightField: 'block_id'});
+var joined = ee.Join.saveFirst('blockMatch').apply(samples, blockFolds, joinFilter);
+samples = joined.map(function(f) {
+  var match = ee.Feature(f.get('blockMatch'));
+  return f.set('block_fold', match.get('block_fold'));
+});
+
+var trainSet = samples.filter(ee.Filter.eq('block_fold', 0));
+
+print('Training samples (this run):', trainSet.size());
 
 // ---- TRAIN RF ----
 var rf = ee.Classifier.smileRandomForest({numberOfTrees: 500, seed: 42})
@@ -137,11 +159,11 @@ var classNames = {
 };
 
 ee.List(classAreas.get('groups')).evaluate(function(list) {
-  print('=== 2023 RF Classification — Class Areas ===');
+  print('=== 2023 RF Classification — Class Areas (corrected spatial block) ===');
   var total = 0;
   list.forEach(function(item) {
     total += item['sum'];
-    print('Class ' + item['class'] + 
+    print('Class ' + item['class'] +
           ' (' + classNames[item['class']] + '): ' +
           item['sum'].toFixed(2) + ' ha');
   });
