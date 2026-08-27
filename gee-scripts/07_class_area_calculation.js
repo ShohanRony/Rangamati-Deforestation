@@ -1,7 +1,12 @@
 // ================================================================
 // RANGAMATI DEFORESTATION MONITORING
 // Script 07: Class Area Calculation for Olofsson Accuracy
-// NO EXPORTS — Console output only
+//
+// Prints per-class area totals to the console for interactive checking,
+// and exports the same totals to Drive as a CSV
+// (RF_MappedArea_PerClass_2023.csv) so python-analysis/olofsson_accuracy.py
+// can load them directly rather than requiring the numbers to be copied in
+// by hand.
 //
 // Training/holdout split: the study area is divided into 0.1-degree
 // geographic blocks; each block is assigned wholly to train or holdout via
@@ -147,6 +152,22 @@ var classAreas = areaImage.reduceRegion({
   geometry:  roi,
   scale:     30,
   maxPixels: 1e13
+});
+
+// ---- EXPORT: class areas for python-analysis/olofsson_accuracy.py ----
+var classAreaFeatures = ee.List(classAreas.get('groups')).map(function(item) {
+  item = ee.Dictionary(item);
+  return ee.Feature(null, {
+    'class':   item.get('class'),
+    'area_ha': item.get('sum')
+  });
+});
+
+Export.table.toDrive({
+  collection:  ee.FeatureCollection(classAreaFeatures),
+  description: 'RF_MappedArea_PerClass_2023',
+  fileFormat:  'CSV',
+  folder:      'Rangamati_Deforestation'
 });
 
 // ---- PRINT TO CONSOLE ----

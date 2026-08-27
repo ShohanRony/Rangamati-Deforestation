@@ -6,10 +6,13 @@ Reference: Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E.,
 Wulder, M.A. (2014). Good practices for estimating area and assessing accuracy
 of land change. Remote Sensing of Environment, 148, 42-57.
 
-INPUTS:
-  1. Mapped class areas (hectares) from Script 07 (corrected spatial-block RF).
-  2. Confusion matrix built from the 200-point independent validation sample,
-     reclassified with the corrected classifier (Script 06b).
+INPUTS (both loaded from files, nothing hardcoded in this script):
+  1. RF_MappedArea_PerClass_2023.csv — mapped class areas (hectares) exported
+     directly by Script 07 (columns: class, area_ha). Run Script 07 in GEE
+     and download this export before running this script.
+  2. ValidationPoints_200_Reclassified_v2.csv — confusion matrix input, built
+     from the 200-point independent validation sample, reclassified with the
+     corrected classifier (Script 06b).
 
 IMPORTANT CAVEAT (read before using these numbers in the paper):
 The 200 validation points were originally drawn as an equal-allocation
@@ -28,7 +31,9 @@ import pandas as pd
 import numpy as np
 
 # ---------------------------------------------------------------------------
-# 1. Mapped class areas (hectares) — Script 07, corrected spatial-block RF
+# 1. Mapped class areas (hectares) — loaded from Script 07's GEE export,
+#    not hardcoded. Re-running Script 07 and re-downloading the CSV is
+#    enough to refresh every number below; nothing needs to be edited here.
 # ---------------------------------------------------------------------------
 class_names = {
     1: 'Dense Forest',
@@ -39,13 +44,17 @@ class_names = {
 }
 classes = [1, 2, 3, 4, 5]
 
-mapped_area_ha = {
-    1: 396367.35,
-    2: 99639.57,
-    3: 30623.85,
-    4: 35083.75,
-    5: 14819.86,
-}
+area_df = pd.read_csv('RF_MappedArea_PerClass_2023.csv')
+mapped_area_ha = dict(zip(area_df['class'].astype(int), area_df['area_ha'].astype(float)))
+
+missing = [c for c in classes if c not in mapped_area_ha]
+if missing:
+    raise ValueError(
+        f"RF_MappedArea_PerClass_2023.csv is missing area(s) for class(es) {missing}. "
+        "Re-run Script 07 in GEE, download the export, and place it next to this "
+        "script before continuing."
+    )
+
 total_area_ha = sum(mapped_area_ha.values())
 W = {i: mapped_area_ha[i] / total_area_ha for i in classes}
 
