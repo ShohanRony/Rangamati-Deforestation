@@ -56,10 +56,8 @@ function addIndices(img) {
 // Compositing window: January 1 - April 30 (dry season), no separate
 // scene-level CLOUD_COVER pre-filter. Cloud/shadow contamination is handled
 // entirely at the pixel level via QA_PIXEL + QA_RADSAT masking (maskAndScale,
-// above) combined with median compositing across the window.
-// which meant Script 04's classifier comparison was NOT evaluated on the
-// same composite actually used for production (Script 05) — that mismatch
-// is now removed.
+// above) combined with median compositing across the window. This matches
+// the compositing window used in Scripts 05/07/08/09.
 function makeL57Composite(year) {
   return ee.ImageCollection('LANDSAT/LT05/C02/T1_L2')
     .merge(ee.ImageCollection('LANDSAT/LE07/C02/T1_L2'))
