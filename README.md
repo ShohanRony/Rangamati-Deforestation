@@ -1,5 +1,7 @@
 # Rangamati Deforestation Monitoring
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22108374.svg)](https://doi.org/10.5281/zenodo.22108374)
+
 Open-source reproduction and extension of a B.Sc. thesis on deforestation
 monitoring in Rangamati, Chittagong Hill Tracts, Bangladesh, using
 Google Earth Engine, Python, and QGIS. Covers a 30-year Landsat time
@@ -21,6 +23,28 @@ Juraichhari, Kaptai, Langadu), Chittagong Hill Tracts, Bangladesh.
 - Hansen Global Forest Change as an independent benchmark.
 - A 200-point manually interpreted validation set (Script 06a), verified
   against high-resolution imagery.
+
+## Data availability
+
+The processed outputs of this study — classified land-cover GeoTIFFs
+(1993-2023), forest masks, the NDVI change raster, the true-color
+composite, validation points, and the publication figures — are archived
+on Zenodo:
+
+| | |
+|---|---|
+| **DOI** | [10.5281/zenodo.22108374](https://doi.org/10.5281/zenodo.22108374) |
+| **Resource type** | Dataset |
+| **Publisher** | Zenodo |
+| **Language** | English |
+| **License** | CC BY 4.0 |
+
+### Citation
+
+> Shohan, S. P., & Sarma, D. (2026). *Landsat-Based Random Forest Land
+> Cover Classification and Validation Dataset for Deforestation
+> Monitoring in Rangamati, Bangladesh (1993–2023)* [Data set]. Zenodo.
+> https://doi.org/10.5281/zenodo.22108374
 
 ## Method
 
