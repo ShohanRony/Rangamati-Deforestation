@@ -1,19 +1,15 @@
 // ================================================================
 // RANGAMATI DEFORESTATION MONITORING
-// Script 06b: Re-classify independent validation points with the
-// CORRECTED classifier (spatial-block bug fixed in Scripts 04/05/07/08)
+// Script 06b: Re-classify Independent Validation Points
 //
-// WHY THIS SCRIPT EXISTS:
-// Your 200-point independent validation set (Script 06a) was manually
-// interpreted against 2023 high-resolution imagery, giving a reliable
-// reference (manual_class) for each point. But the RF-predicted class
-// stored alongside it (rf_class) was extracted from the OLD classified
-// map — the one trained under the buggy spatial-block split. Since the
-// classifier has changed, the predicted class at each validation point
-// needs to be re-extracted from the NEW classified2023 image before the
-// confusion matrix / Olofsson area-adjusted accuracy can be recomputed.
-// The manual reference labels themselves do NOT need to be redone —
-// only the predicted side of the comparison.
+// PURPOSE:
+// The 200-point independent validation set (Script 06a) was manually
+// interpreted against 2023 high-resolution imagery, giving a reference
+// label (manual_class) for each point. This script extracts the
+// corresponding RF-predicted class (rf_class) for each validation point
+// from the classified2023 image, so the confusion matrix / Olofsson
+// area-adjusted accuracy can be computed. The manual reference labels
+// are produced separately in Script 06a and are not touched here.
 //
 // SETUP REQUIRED BEFORE RUNNING:
 // 1. Upload ValidationPoints_200_ForReupload.geojson as a GEE Table asset
@@ -22,7 +18,7 @@
 //    (e.g. 'projects/crypto-hallway-405211/assets/ValidationPoints_200').
 // ================================================================
 
-var VALIDATION_ASSET = 'PASTE_YOUR_UPLOADED_ASSET_PATH_HERE';
+var VALIDATION_ASSET = 'projects/crypto-hallway-405211/assets/ValidationPoints_200_Reupload';
 
 // ---- STUDY AREA ----
 var studyArea = ee.FeatureCollection(
@@ -110,7 +106,7 @@ var samples = classMap.addBands(composite2023).stratifiedSample({
   geometries: true
 });
 
-// ---- Spatial block assignment — FIXED (identical to Script 07) ----
+// ---- Spatial block assignment (identical to Script 07) ----
 samples = samples.map(function(f) {
   var c   = f.geometry().coordinates();
   var bx  = ee.Number(c.get(0)).multiply(10).floor();
@@ -156,11 +152,19 @@ var reclassified = classified2023.reduceRegions({
   scale: 30
 });
 
+// reduceRegions() with ee.Reducer.first() on a renamed single-band image
+// still names its output column 'first', not the band name. Rename it
+// explicitly so downstream code and the exported CSV have a clear,
+// unambiguous column name.
+reclassified = reclassified.map(function(f) {
+  return f.set('rf_class_new', f.get('first'));
+});
+
 print('Re-classified validation points (first 5):', reclassified.limit(5));
 
 // ---- Quick console confusion check (manual_class vs rf_class_new) ----
 var confusion = reclassified.errorMatrix('manual_class', 'rf_class_new');
-print('=== Independent validation — RAW confusion matrix (corrected classifier) ===');
+print('=== Independent validation — RAW confusion matrix ===');
 print('Raw OA:', confusion.accuracy());
 print('Kappa:', confusion.kappa());
 print('Matrix:', confusion);

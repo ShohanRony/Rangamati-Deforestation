@@ -4,11 +4,11 @@
 // Researcher: Shohinur Pervez Shohan, RMSTU
 // Classes: 5 (Dense Forest, Degraded Forest/Shrub, Water,
 //             Agriculture/Settlement, Bare Land)
-// Validation: Spatial-block holdout (0.1 deg blocks, ~30% of blocks held out)
-//   NOTE (fixed): each 0.1-deg block is assigned WHOLLY to train or holdout
-//   via a seeded random draw on the block, not on individual points, and not
-//   via a coordinate-derived modulo (the previous block_id/mod(10) scheme
-//   collapsed to a latitude-only split — see comments below).
+// Validation: Spatial-block holdout. The study area is divided into
+//   0.1-degree geographic blocks; each block is assigned wholly to the
+//   training set or the holdout set via a seeded random draw on the
+//   block (not on individual points), so nearby pixels never end up
+//   split across train and test.
 // ============================================================
 
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
@@ -53,11 +53,10 @@ function addIndices(img) {
   return img.addBands([ndvi, ndwi, evi, nbr]);
 }
 
-// NOTE (standardized): window and filter now match Scripts 05/07/08 exactly —
-// January 1 - April 30, no separate scene-level CLOUD_COVER pre-filter.
-// Cloud/shadow contamination is instead handled entirely at the pixel level
-// via QA_PIXEL + QA_RADSAT masking (maskAndScale, above) combined with
-// median compositing. This used to be Jan 1 - May 1 with CLOUD_COVER < 70,
+// Compositing window: January 1 - April 30 (dry season), no separate
+// scene-level CLOUD_COVER pre-filter. Cloud/shadow contamination is handled
+// entirely at the pixel level via QA_PIXEL + QA_RADSAT masking (maskAndScale,
+// above) combined with median compositing across the window.
 // which meant Script 04's classifier comparison was NOT evaluated on the
 // same composite actually used for production (Script 05) — that mismatch
 // is now removed.
@@ -104,9 +103,8 @@ var featureBands = ['Blue','Green','Red','NIR','SWIR1','SWIR2',
 // 1=Dense Forest  2=Degraded Forest/Shrub/Grass  3=Water
 // 4=Agriculture/Settlement  5=Bare Land
 // ---------------------------------------------------------------------------
-// NOTE (standardized): explicit versioned asset id, matching Scripts 05/07/08
-// exactly (same underlying dataset as ee.ImageCollection('ESA/WorldCover/v200').first(),
-// but pinned so the exact version is unambiguous and citable in the paper).
+// Explicit versioned ESA WorldCover asset id, so the exact source dataset
+// version is unambiguous and citable in the paper.
 var worldcover = ee.Image('ESA/WorldCover/v200/2021').select('Map').clip(studyArea);
 var ndvi2023   = composite2023.select('NDVI');
 var tree       = worldcover.eq(10);
@@ -137,21 +135,15 @@ print('Per-class distribution:', samples.aggregate_histogram('landcover'));
 print('Class legend: 1=Dense Forest | 2=Degraded/Shrub | 3=Water | 4=Agri/Settlement | 5=Bare Land');
 
 // ---------------------------------------------------------------------------
-// Spatial block assignment — FIXED
+// Spatial block assignment
 //
-// Bug in the previous version: block_id was computed as
-//   block = bx * 10000 + by
-// and the fold was block_id.mod(10). Because 10000 is divisible by 10,
-// (bx*10000 + by) mod 10 always equals (by mod 10) — the bx (longitude)
-// term contributes nothing to the modulo. The "10 spatial blocks" were in
-// fact 10 latitude stripes; longitude played no role in the split.
-//
-// Fix: build a 0.1-deg block id from (bx, by) as before (this id is now
-// used ONLY as a block identifier, never fed into a modulo), then assign
-// each DISTINCT block — not each point — to train or holdout via a single
-// seeded random draw per block. This guarantees every point inside a given
-// 0.1-deg cell goes to the same partition, and the partition itself is a
-// genuine 2-D spatial split rather than a coordinate-derived pattern.
+// Each sample point is assigned a 0.1-degree block id from its (bx, by)
+// grid cell. Every DISTINCT block — not each point individually — is then
+// assigned to train or holdout via a single seeded random draw per block.
+// This guarantees every point inside a given 0.1-degree cell goes to the
+// same partition, giving a genuine two-dimensional spatial split (rather
+// than a random per-point split, which would let near-identical neighboring
+// pixels leak between train and test).
 // ---------------------------------------------------------------------------
 samples = samples.map(function(f) {
   var c   = f.geometry().coordinates();
@@ -300,8 +292,6 @@ print('Forest area by year:', ee.FeatureCollection(areaFeatures));
 
 // ---------------------------------------------------------------------------
 // EXPORT: Confusion matrices + class areas (for Olofsson analysis)
-// Filenames suffixed "_v2" so they don't overwrite the earlier
-// (buggy-split) exports — keep both, but use only the _v2 files in the paper.
 // ---------------------------------------------------------------------------
 Export.table.toDrive({
   collection: ee.FeatureCollection([ee.Feature(null, {

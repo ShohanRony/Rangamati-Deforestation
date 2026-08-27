@@ -2,6 +2,10 @@
 // RANGAMATI DEFORESTATION MONITORING
 // Script 08: Forest Definition Sensitivity Analysis
 // Tests NDVI thresholds: 0.45 / 0.55 / 0.60
+//
+// Training/holdout split: the study area is divided into 0.1-degree
+// geographic blocks; each block is assigned wholly to train or holdout via
+// a seeded random draw per block (see Script 04 for the full pipeline).
 // ================================================================
 
 // ---- STUDY AREA ----
@@ -100,15 +104,31 @@ function buildClassifier(ndviThreshold, composite2023) {
     geometries: true
   });
 
+  // -------------------------------------------------------------------
+  // Spatial block assignment (see Script 04 for full explanation)
+  // -------------------------------------------------------------------
   samples = samples.map(function(f) {
-    var c  = f.geometry().coordinates();
-    var bx = ee.Number(c.get(0)).multiply(10).floor();
-    var by = ee.Number(c.get(1)).multiply(10).floor();
-    var block = bx.multiply(10000).add(by);
-    return f.set('block_id', block).set('block_fold', block.abs().mod(10));
+    var c   = f.geometry().coordinates();
+    var bx  = ee.Number(c.get(0)).multiply(10).floor();
+    var by  = ee.Number(c.get(1)).multiply(10).floor();
+    var bid = bx.format('%d').cat('_').cat(by.format('%d'));
+    return f.set('block_id', bid);
   });
 
-  var trainSet = samples.filter(ee.Filter.lt('block_fold', 7));
+  var uniqueBlocks = samples.distinct('block_id').randomColumn('rand', 42);
+  var blockFolds = uniqueBlocks.map(function(b) {
+    var isHoldout = ee.Number(b.get('rand')).gte(0.7);
+    return b.set('block_fold', ee.Algorithms.If(isHoldout, 1, 0));
+  });
+
+  var joinFilter = ee.Filter.equals({leftField: 'block_id', rightField: 'block_id'});
+  var joined = ee.Join.saveFirst('blockMatch').apply(samples, blockFolds, joinFilter);
+  samples = joined.map(function(f) {
+    var match = ee.Feature(f.get('blockMatch'));
+    return f.set('block_fold', match.get('block_fold'));
+  });
+
+  var trainSet = samples.filter(ee.Filter.eq('block_fold', 0));
 
   return ee.Classifier.smileRandomForest({numberOfTrees: 500, seed: 42})
     .train({

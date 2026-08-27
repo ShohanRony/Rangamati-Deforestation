@@ -3,9 +3,9 @@
 // Script 07: Class Area Calculation for Olofsson Accuracy
 // NO EXPORTS — Console output only
 //
-// FIXED (this version): spatial-block assignment corrected — see Script 04
-// for full explanation of the bx*10000+by mod 10 bug. Each 0.1-deg block is
-// now assigned wholly to train or holdout via a seeded random draw per block.
+// Training/holdout split: the study area is divided into 0.1-degree
+// geographic blocks; each block is assigned wholly to train or holdout via
+// a seeded random draw per block (see Script 04 for the full pipeline).
 // ================================================================
 
 // ---- STUDY AREA ----
@@ -96,7 +96,7 @@ var samples = classMap.addBands(composite2023).stratifiedSample({
 });
 
 // ---------------------------------------------------------------------------
-// Spatial block assignment — FIXED (see Script 04 for full explanation)
+// Spatial block assignment (see Script 04 for full explanation)
 // ---------------------------------------------------------------------------
 samples = samples.map(function(f) {
   var c   = f.geometry().coordinates();
@@ -159,7 +159,7 @@ var classNames = {
 };
 
 ee.List(classAreas.get('groups')).evaluate(function(list) {
-  print('=== 2023 RF Classification — Class Areas (corrected spatial block) ===');
+  print('=== 2023 RF Classification — Class Areas ===');
   var total = 0;
   list.forEach(function(item) {
     total += item['sum'];
