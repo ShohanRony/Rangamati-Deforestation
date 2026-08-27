@@ -45,11 +45,15 @@ var srtm    = ee.Image('USGS/SRTMGL1_003').clip(studyArea);
 var terrain = srtm.rename('elevation')
   .addBands(ee.Terrain.slope(srtm).rename('slope'));
 
+// No scene-level CLOUD_COVER pre-filter — cloud/shadow contamination is
+// handled entirely at the pixel level via QA_PIXEL + QA_RADSAT masking
+// (maskAndScale, above), matching the production composite (Script 04/05/
+// 07/09), so the validation-point selection composite is built the same
+// way as the map it is validating.
 function makeL8Composite(year) {
   var col = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
     .filterBounds(studyArea)
-    .filterDate(year+'-01-01', year+'-05-01')
-    .filter(ee.Filter.lt('CLOUD_COVER', 70))
+    .filterDate(year+'-01-01', year+'-04-30')
     .map(maskAndScale).map(harmonizeL8).map(addIndices);
   return col.median().clip(studyArea)
     .addBands(terrain).set('year', year);

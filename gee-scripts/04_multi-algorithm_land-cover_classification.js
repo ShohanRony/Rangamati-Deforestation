@@ -4,11 +4,13 @@
 // Researcher: Shohinur Pervez Shohan, RMSTU
 // Classes: 5 (Dense Forest, Degraded Forest/Shrub, Water,
 //             Agriculture/Settlement, Bare Land)
-// Validation: Spatial-block holdout. The study area is divided into
-//   0.1-degree geographic blocks; each block is assigned wholly to the
-//   training set or the holdout set via a seeded random draw on the
-//   block (not on individual points), so nearby pixels never end up
-//   split across train and test.
+// Validation: single spatial-block holdout (not k-fold cross-validation).
+//   The study area is divided into 0.1-degree geographic blocks; each
+//   block is assigned wholly to the training set or the holdout set via
+//   one seeded random draw on the block (not on individual points), so
+//   nearby pixels never end up split across train and test.
+// Epochs: six production epochs (1993, 1998, 2003, 2008, 2018, 2023);
+//   2013 is not part of the final analysis.
 // ============================================================
 
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
@@ -32,7 +34,8 @@ function maskAndScale(img) {
     .copyProperties(img, img.propertyNames());
 }
 
-// Roy et al. (2016): OLI -> ETM+ harmonization
+// Roy et al. (2016): OLI -> ETM+ harmonization (Landsat 8 only; Landsat 5
+// and 7 already share the same band definitions, so they are used natively).
 function harmonizeL8(img) {
   var slopes     = ee.Image.constant([0.8850,0.9317,0.9372,0.8339,0.8639,0.9165]);
   var intercepts = ee.Image.constant([0.0183,0.0123,0.0123,0.0448,0.0306,0.0116]);
@@ -40,6 +43,18 @@ function harmonizeL8(img) {
   var out = l8.multiply(slopes).add(intercepts)
               .rename(['Blue','Green','Red','NIR','SWIR1','SWIR2']);
   return out.copyProperties(img, img.propertyNames());
+}
+
+function harmonizeL5(img) {
+  var optical = img.select(['SR_B1','SR_B2','SR_B3','SR_B4','SR_B5','SR_B7']);
+  return optical.rename(['Blue','Green','Red','NIR','SWIR1','SWIR2'])
+    .copyProperties(img, img.propertyNames());
+}
+
+function harmonizeL7(img) {
+  var optical = img.select(['SR_B1','SR_B2','SR_B3','SR_B4','SR_B5','SR_B7']);
+  return optical.rename(['Blue','Green','Red','NIR','SWIR1','SWIR2'])
+    .copyProperties(img, img.propertyNames());
 }
 
 function addIndices(img) {
@@ -56,28 +71,28 @@ function addIndices(img) {
 // Compositing window: January 1 - April 30 (dry season), no separate
 // scene-level CLOUD_COVER pre-filter. Cloud/shadow contamination is handled
 // entirely at the pixel level via QA_PIXEL + QA_RADSAT masking (maskAndScale,
-// above) combined with median compositing across the window. This matches
-// the compositing window used in Scripts 05/07/08/09.
-function makeL57Composite(year) {
-  return ee.ImageCollection('LANDSAT/LT05/C02/T1_L2')
-    .merge(ee.ImageCollection('LANDSAT/LE07/C02/T1_L2'))
-    .filterBounds(studyArea)
-    .filterDate(year + '-01-01', year + '-04-30')
-    .map(maskAndScale)
-    .map(function(img) {
-      return img.select(['SR_B1','SR_B2','SR_B3','SR_B4','SR_B5','SR_B7'])
-                .rename(['Blue','Green','Red','NIR','SWIR1','SWIR2']);
-    })
-    .map(addIndices)
-    .median().clip(studyArea).set('year', year);
-}
+// above) combined with median compositing across the window. One sensor per
+// epoch — matching the sensor-by-year assignment used in Scripts 05/07/09
+// (Landsat 5 for 1993/1998/2008, Landsat 7 for 2003, Landsat 8 for
+// 2018/2023) — so the classifier comparison below is trained on the same
+// kind of composite that produces the final production maps.
+var epochs = [
+  {year: 1993, col: 'LANDSAT/LT05/C02/T1_L2', harmonize: harmonizeL5},
+  {year: 1998, col: 'LANDSAT/LT05/C02/T1_L2', harmonize: harmonizeL5},
+  {year: 2003, col: 'LANDSAT/LE07/C02/T1_L2', harmonize: harmonizeL7},
+  {year: 2008, col: 'LANDSAT/LT05/C02/T1_L2', harmonize: harmonizeL5},
+  {year: 2018, col: 'LANDSAT/LC08/C02/T1_L2', harmonize: harmonizeL8},
+  {year: 2023, col: 'LANDSAT/LC08/C02/T1_L2', harmonize: harmonizeL8}
+];
 
-function makeL8Composite(year) {
-  return ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
+function makeComposite(ep) {
+  return ee.ImageCollection(ep.col)
     .filterBounds(studyArea)
-    .filterDate(year + '-01-01', year + '-04-30')
-    .map(maskAndScale).map(harmonizeL8).map(addIndices)
-    .median().clip(studyArea).set('year', year);
+    .filterDate(ep.year + '-01-01', ep.year + '-04-30')
+    .map(maskAndScale)
+    .map(ep.harmonize)
+    .map(addIndices)
+    .median().clip(studyArea).set('year', ep.year);
 }
 
 var srtm    = ee.Image('USGS/SRTMGL1_003').clip(studyArea);
@@ -85,13 +100,12 @@ var terrain = srtm.rename('elevation')
                   .addBands(ee.Terrain.slope(srtm).rename('slope'));
 function withTerrain(img) { return img.addBands(terrain); }
 
-var composite1993 = withTerrain(makeL57Composite(1993));
-var composite1998 = withTerrain(makeL57Composite(1998));
-var composite2003 = withTerrain(makeL57Composite(2003));
-var composite2008 = withTerrain(makeL57Composite(2008));
-var composite2013 = withTerrain(makeL8Composite(2013));
-var composite2018 = withTerrain(makeL8Composite(2018));
-var composite2023 = withTerrain(makeL8Composite(2023));
+var composite1993 = withTerrain(makeComposite(epochs[0]));
+var composite1998 = withTerrain(makeComposite(epochs[1]));
+var composite2003 = withTerrain(makeComposite(epochs[2]));
+var composite2008 = withTerrain(makeComposite(epochs[3]));
+var composite2018 = withTerrain(makeComposite(epochs[4]));
+var composite2023 = withTerrain(makeComposite(epochs[5]));
 
 var featureBands = ['Blue','Green','Red','NIR','SWIR1','SWIR2',
                     'NDVI','NDWI','EVI','NBR','elevation','slope'];
@@ -265,10 +279,12 @@ Map.addLayer(standardizeImg(composite2023).classify(svm), visClass, 'SVM 2023', 
 
 // ---------------------------------------------------------------------------
 // Apply RF to full time series + forest area by year
+// (six production epochs only — 1993/1998/2003/2008/2018/2023; 2013 is not
+// part of the final analysis, see Script 09)
 // ---------------------------------------------------------------------------
 var composites = [composite1993, composite1998, composite2003,
-                  composite2008, composite2013, composite2018, composite2023];
-var years      = [1993, 1998, 2003, 2008, 2013, 2018, 2023];
+                  composite2008, composite2018, composite2023];
+var years      = [1993, 1998, 2003, 2008, 2018, 2023];
 
 var classified = composites.map(function(img) {
   return img.select(featureBands).classify(rf).set('year', img.get('year'));
