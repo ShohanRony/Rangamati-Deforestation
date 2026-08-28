@@ -84,6 +84,7 @@ data/                Validation point sets (CSV / GeoJSON / KML)
 | `08_sensitivity_analysis.js` | Forest-definition sensitivity analysis across NDVI thresholds |
 | `09_Transition_Analysis.js` | Land-cover transition matrices between epochs and cumulative 1993-2023 |
 | `10_data_quality_check.js` | Per-epoch Landsat scene count / cloud cover / valid-pixel diagnostic |
+| `11_Spectral_Separability_Diagnostic.js` | Dense Forest vs Degraded/Jhum NDVI class-separability (M-statistic) per epoch, testing the class-boundary-instability hypothesis for the 2008 dip |
 
 Each script is self-contained and can be run directly in the GEE Code
 Editor; later scripts reuse the same preprocessing and classifier-build
