@@ -6,7 +6,7 @@
 //   1. RF Classified maps (6 epochs) as GeoTIFF
 //   2. 2023 RGB composite for basemap reference
 //   3. NDVI change stack for visualization
-//   4. Forest binary mask per epoch (for area calculation in QGIS)
+//   4. Forest binary mask per epoch (for area calculation in Python)
 //
 // Training/holdout split: the study area is divided into 0.1-degree
 // geographic blocks; each block is assigned wholly to train or holdout via
@@ -217,7 +217,7 @@ epochs.forEach(function(ep) {
 });
 
 // ================================================================
-// PART 2: EXPORT 2023 RGB COMPOSITE (for basemap in QGIS)
+// PART 2: EXPORT 2023 RGB COMPOSITE (for basemap in publication figures)
 // ================================================================
 var composite2023vis = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
   .filterBounds(roi)
