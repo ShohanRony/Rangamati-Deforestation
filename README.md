@@ -19,6 +19,23 @@ source asset, not a scope change — the underlying polygon is the
 Rangamati district boundary, and analysis is performed and reported at
 the district level only (no upazila-level breakdown).
 
+### Boundary data source
+
+The Bangladesh Level-2 administrative boundary (`BGD_adm2`) used to
+derive the study-area polygon is a [GADM](https://gadm.org) dataset,
+mirrored for download by [DIVA-GIS](https://www.diva-gis.org/). It is
+**not redistributed in this repository** — GADM's license permits free
+academic/non-commercial use but not redistribution without prior
+permission. To reproduce the boundary asset used in the GEE scripts:
+
+1. Download the Bangladesh Level-2 administrative boundary shapefile
+   from [DIVA-GIS](https://www.diva-gis.org/data.html) or directly from
+   [GADM](https://gadm.org/download_country.html) (select Bangladesh).
+2. Upload the shapefile to Google Earth Engine as a table asset named
+   `BGD_adm2`.
+3. In the scripts, the study-area polygon is selected with
+   `NAME_2 == 'Parbattya Chattagram'` (see "Study area" above).
+
 ## Data
 
 - Landsat 5 (1993, 1998, 2008), Landsat 7 (2003), and Landsat 8 (2018, 2023)
