@@ -1,0 +1,20 @@
+No license has been selected for the source code in this repository yet.
+
+This is a placeholder, not a license grant. Until a LICENSE file with an
+OSI-approved (or other) license text replaces this one, default copyright
+applies: no permission is granted to copy, modify, or redistribute this
+code beyond what GitHub's Terms of Service allow for public repositories
+(viewing and forking).
+
+Note: the *data* archived on Zenodo (DOI 10.5281/zenodo.22108374) is
+separately licensed CC BY 4.0 — see README.md, "Data availability". That
+license covers the Zenodo dataset only, not the code in this repository.
+
+Common choices for research-code repositories, for reference when you
+decide:
+  - MIT / BSD-3-Clause  - permissive, minimal conditions.
+  - Apache-2.0          - permissive, includes an explicit patent grant.
+  - GPL-3.0 / AGPL-3.0  - copyleft, derivative works must stay open.
+
+Pick one, replace this file's contents with the license's standard text,
+and update the "License" section of README.md accordingly.
