@@ -1,18 +1,26 @@
-// ================================================================
-// RANGAMATI DEFORESTATION MONITORING
-// Script 05: Export Classified Maps to Google Drive
-// ================================================================
-// Exports:
-//   1. RF Classified maps (6 epochs) as GeoTIFF
-//   2. 2023 RGB composite for basemap reference
-//   3. NDVI change stack for visualization
-//   4. Forest binary mask per epoch (for area calculation in Python)
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 05 - Export Classified Maps (PRODUCTION)
+// ----------------------------------------------------------------------------
+// STATUS: production. Preprocessing/harmonisation/classifier setup mirrors
+//   Script 04 exactly (same seed, same block split, same six epochs).
 //
-// Training/holdout split: the study area is divided into 0.1-degree
-// geographic blocks; each block is assigned wholly to train or holdout via
-// a single seeded random draw per block (seed=42), matching Script 04.
-// Compositing window: January 1 - April 30, consistent with Scripts 07/08.
-// ================================================================
+// Purpose:  Export the six per-epoch classified maps and supporting rasters
+//           to Google Drive for downstream area calculation (Script 07),
+//           transition analysis (Script 09), and figure generation
+//           (notebooks/publication_figures.ipynb).
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); ESA/WorldCover/v200/2021;
+//           Landsat 5/7/8 C02 T1_L2 collections.
+// Outputs:  Drive exports -
+//             1. RF-classified maps, GeoTIFF, one per epoch (6 files)
+//             2. 2023 RGB composite (basemap reference)
+//             3. NDVI change stack (visualization)
+//             4. Forest binary mask, one per epoch (Python area calc.)
+// Depends:  none (self-contained; regenerates its own training sample).
+// Params:   seed=42; compositing window 1 Jan - 30 Apr (consistent with
+//           Scripts 07/08/09).
+// ============================================================================
 
 // ---- STUDY AREA ----
 var studyArea = ee.FeatureCollection(

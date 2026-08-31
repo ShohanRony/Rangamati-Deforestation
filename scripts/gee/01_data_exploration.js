@@ -1,10 +1,21 @@
-// ============================================================
-// PROJECT: Deforestation Monitoring - Rangamati
-// Script 01a: NDVI Data Exploration (Landsat 5 vs Landsat 8)
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 01a - NDVI Data Exploration (Landsat 5 vs Landsat 8)
 // Researcher: Shohinur Pervez Shohan, RMSTU
-// Purpose: Compare NDVI vegetation cover between 2000 and 2023
-//          using an approximate bounding rectangle for the district.
-// ============================================================
+// ----------------------------------------------------------------------------
+// STATUS: preliminary / exploratory. Not part of the production pipeline.
+//   Retained for provenance. Uses an approximate bounding rectangle instead
+//   of the real district boundary; superseded by 01_study_area_exploration.js
+//   (real boundary) and 04_multi-algorithm_land-cover_classification.js
+//   (production classification).
+//
+// Purpose:  Quick visual NDVI comparison, Landsat 5 (2000) vs Landsat 8
+//           (2023), over a bounding-rectangle approximation of the district.
+// Inputs:   LANDSAT/LT05/C02/T1_L2, LANDSAT/LC08/C02/T1_L2 (public EE
+//           collections). No private assets required.
+// Outputs:  Map layers only (NDVI 2000, NDVI 2023, boundary). No exports.
+// Depends:  none.
+// ============================================================================
 
 // Rangamati district - approximate bounding rectangle
 var rangamati = ee.Geometry.Rectangle([91.90, 22.05, 92.55, 23.75]);

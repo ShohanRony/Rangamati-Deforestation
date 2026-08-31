@@ -1,7 +1,18 @@
-// ================================================
-// PROJECT: Deforestation Monitoring - Rangamati
-// Script 01: Study Area + Data Exploration
-// ================================================
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 01 - Study Area and Data Exploration
+// ----------------------------------------------------------------------------
+// STATUS: preliminary / exploratory. Not part of the production pipeline.
+//   Retained for provenance. First script to load the real district
+//   boundary asset; superseded for production use by Script 04.
+//
+// Purpose:  Preview the district boundary and Landsat 5 (2000) / Landsat 8
+//           (2023) true-color composites; report area and scene counts.
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); LANDSAT/LT05 and LC08 C02 T1_L2.
+// Outputs:  Map layers + console prints (area km2, scene counts). No exports.
+// Depends:  none.
+// ============================================================================
 
 // --- Study Area (Rangamati District) ---
 var bgd = ee.FeatureCollection(

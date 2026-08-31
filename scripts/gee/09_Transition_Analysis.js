@@ -1,25 +1,27 @@
-// ================================================================
-// RANGAMATI DEFORESTATION MONITORING
-// Script 09: Land-Cover Change and Transition Analysis
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 09 - Land-Cover Transition Analysis (PRODUCTION)
+// ----------------------------------------------------------------------------
+// STATUS: production. Preprocessing/harmonisation/classifier setup mirrors
+//   Script 04 exactly (same seed, same block split).
 //
-// Computes pairwise transition matrices between consecutive epochs
-// (1993-1998, 1998-2003, 2003-2008, 2008-2018, 2018-2023) plus the
-// cumulative 1993-2023 comparison, using the same spatial-block
-// classifier pipeline as Scripts 05/07/08. 2013 is excluded — it is
-// legacy/exploratory and not part of the final six-epoch analysis.
-//
-// Area per transition is computed with an ee.Image.pixelArea()-weighted
-// grouped sum, giving the true geodesic area of every pixel regardless
-// of its position within the study area's projection (consistent with
-// the method used in Script 07).
-//
-// Because intervals are unequal (5, 5, 5, 10, 5 years), raw hectare
-// changes between periods are NOT directly comparable — this script
-// reports both raw area change AND annualized rate (ha/year) for every
-// transition category.
-//
-// Classes: 1=Dense Forest 2=Degraded/Jhum 3=Water 4=Agri/Settlement 5=Bare Land
-// ================================================================
+// Purpose:  Compute pairwise transition matrices between consecutive
+//           epochs (1993-1998, 1998-2003, 2003-2008, 2008-2018, 2018-2023)
+//           plus the cumulative 1993-2023 comparison. 2013 is excluded -
+//           it is not part of the final six-epoch analysis. Area per
+//           transition uses an ee.Image.pixelArea()-weighted grouped sum
+//           (true geodesic area, consistent with Script 07). Intervals are
+//           unequal (5, 5, 5, 10, 5 years), so raw hectare changes between
+//           periods are not directly comparable; both raw area change and
+//           annualised rate (ha/year) are reported for every category.
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); ESA/WorldCover/v200/2021;
+//           Landsat 5/7/8 C02 T1_L2 collections.
+// Outputs:  Console prints (transition matrices, raw + annualised ha).
+// Depends:  none (self-contained; regenerates its own training sample).
+// Params:   seed=42. Classes: 1=Dense Forest, 2=Degraded/Jhum, 3=Water,
+//           4=Agriculture/Settlement, 5=Bare Land.
+// ============================================================================
 
 var studyArea = ee.FeatureCollection(
   'projects/crypto-hallway-405211/assets/BGD_adm2'

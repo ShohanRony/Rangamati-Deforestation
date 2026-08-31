@@ -1,17 +1,30 @@
-// ============================================================
-// PROJECT: Deforestation Monitoring - Rangamati
-// Script 04: Multi-Algorithm Land Cover Classification
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 04 - Multi-Algorithm Land-Cover Classification (PRODUCTION)
 // Researcher: Shohinur Pervez Shohan, RMSTU
-// Classes: 5 (Dense Forest, Degraded Forest/Shrub, Water,
-//             Agriculture/Settlement, Bare Land)
-// Validation: single spatial-block holdout (not k-fold cross-validation).
-//   The study area is divided into 0.1-degree geographic blocks; each
-//   block is assigned wholly to the training set or the holdout set via
-//   one seeded random draw on the block (not on individual points), so
-//   nearby pixels never end up split across train and test.
-// Epochs: six production epochs (1993, 1998, 2003, 2008, 2018, 2023);
-//   2013 is not part of the final analysis.
-// ============================================================
+// ----------------------------------------------------------------------------
+// STATUS: production. Canonical classifier-comparison script; results
+//   reported in the manuscript (Random Forest 77.10%, SVM 78.04%,
+//   CART 72.90% overall accuracy on the spatial-block holdout).
+//
+// Purpose:  Compare Random Forest / SVM / CART classifiers on a five-class
+//           scheme (Dense Forest, Degraded Forest/Jhum, Water,
+//           Agriculture/Settlement, Bare Land) under a single spatial-block
+//           holdout (not k-fold cross-validation): the study area is split
+//           into 0.1-degree geographic blocks, each assigned wholly to
+//           train or holdout via one seeded random draw per block, so
+//           nearby pixels never leak across the split.
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); ESA/WorldCover/v200/2021;
+//           Landsat 5/7/8 C02 T1_L2 collections.
+// Outputs:  Console prints (confusion matrices, overall accuracy, kappa
+//           per classifier). No Drive export in this script; classified
+//           maps are exported separately by Script 05.
+// Depends:  none (self-contained; regenerates its own training sample).
+// Epochs:   six production epochs (1993, 1998, 2003, 2008, 2018, 2023);
+//           2013 is excluded from the final analysis.
+// Params:   seed=42 (sampling + block assignment); RF numberOfTrees=500.
+// ============================================================================
 
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
   .filter(ee.Filter.eq('NAME_2', 'Parbattya Chattagram'));

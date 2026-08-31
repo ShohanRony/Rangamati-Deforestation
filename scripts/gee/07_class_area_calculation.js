@@ -1,17 +1,21 @@
-// ================================================================
-// RANGAMATI DEFORESTATION MONITORING
-// Script 07: Class Area Calculation for Olofsson Accuracy
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 07 - Class Area Calculation for Olofsson Accuracy (PRODUCTION)
+// ----------------------------------------------------------------------------
+// STATUS: production. Preprocessing/harmonisation/classifier setup mirrors
+//   Script 04 exactly (same seed, same block split).
 //
-// Prints per-class area totals to the console for interactive checking,
-// and exports the same totals to Drive as a CSV
-// (RF_MappedArea_PerClass_2023.csv) so python-analysis/olofsson_accuracy.py
-// can load them directly rather than requiring the numbers to be copied in
-// by hand.
-//
-// Training/holdout split: the study area is divided into 0.1-degree
-// geographic blocks; each block is assigned wholly to train or holdout via
-// a seeded random draw per block (see Script 04 for the full pipeline).
-// ================================================================
+// Purpose:  Compute per-class mapped area (2023 epoch) for the
+//           area-adjusted accuracy estimator.
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); ESA/WorldCover/v200/2021;
+//           Landsat 5/7/8 C02 T1_L2 collections.
+// Outputs:  Console prints (per-class area, ha) + Drive CSV export
+//           (RF_MappedArea_PerClass_2023.csv) -> loaded directly by
+//           scripts/python/olofsson_accuracy.py.
+// Depends:  none (self-contained; regenerates its own training sample).
+// Params:   seed=42.
+// ============================================================================
 
 // ---- STUDY AREA ----
 var studyArea = ee.FeatureCollection(
@@ -154,7 +158,7 @@ var classAreas = areaImage.reduceRegion({
   maxPixels: 1e13
 });
 
-// ---- EXPORT: class areas for python-analysis/olofsson_accuracy.py ----
+// ---- EXPORT: class areas for scripts/python/olofsson_accuracy.py ----
 var classAreaFeatures = ee.List(classAreas.get('groups')).map(function(item) {
   item = ee.Dictionary(item);
   return ee.Feature(null, {

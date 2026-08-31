@@ -1,10 +1,28 @@
-// ================================================
-// PROJECT: Deforestation Monitoring - Rangamati
-// Script 02: Full Data Pipeline
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 02 - Early Multi-Epoch Compositing Pipeline (draft)
 // Researcher: Shohinur Pervez Shohan, RMSTU
-// Purpose: Build multi-year Landsat composites (1993-2023) with
-//          spectral indices and NDVI change detection.
-// ================================================
+// ----------------------------------------------------------------------------
+// STATUS: preliminary / exploratory. Not part of the production pipeline.
+//   Retained for provenance. Differs from the production pipeline
+//   (Script 04 onward) in three respects, noted here so results are not
+//   mixed up across script versions:
+//     1. Uses the Roy et al. (2016) Table 2 OLS coefficients in the
+//        ETM+ -> OLI direction; the production scripts (04, 05, 07, 08, 09)
+//        use the OLI -> ETM+ direction with different coefficient values.
+//     2. Includes a 2013 Landsat 8 epoch; the production analysis uses six
+//        epochs only (1993, 1998, 2003, 2008, 2018, 2023) and excludes 2013.
+//     3. Produces a raw pixel-wise NDVI-difference "change" layer; the
+//        production change analysis (Script 09) instead differences
+//        classified maps and reports a full transition matrix.
+//
+// Purpose:  Build multi-year Landsat composites with spectral indices and
+//           preview a naive NDVI-difference change layer.
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); Landsat 5/7/8 C02 T1_L2 collections.
+// Outputs:  Map layers + console prints only. No exports.
+// Depends:  none.
+// ============================================================================
 
 var bgd = ee.FeatureCollection(
   'projects/crypto-hallway-405211/assets/BGD_adm2'

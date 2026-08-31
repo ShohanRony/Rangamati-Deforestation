@@ -1,9 +1,22 @@
-// ============================================================
-// SCRIPT 03: TRAINING SAMPLE COLLECTION
-// Project: Deforestation Monitoring - Rangamati, Bangladesh
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 03 - Training-Sample Collection Prototype
 // Researcher: Shohinur Pervez Shohan, RMSTU
-// Method: Stratified Random Sampling via ESA WorldCover 2021
-// ============================================================
+// ----------------------------------------------------------------------------
+// STATUS: preliminary / exploratory. Not part of the production pipeline.
+//   Retained for provenance. Script 04 does not import this script's
+//   output; it performs its own independent stratifiedSample() call
+//   (same seed, 42) against ee.Image('ESA/WorldCover/v200/2021') — an
+//   explicitly versioned single-image asset — rather than this script's
+//   ee.ImageCollection('ESA/WorldCover/v200') mosaic.
+//
+// Purpose:  Prototype stratified random sampling of training points from
+//           ESA WorldCover 2021, seed=42.
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); ESA/WorldCover/v200 (public).
+// Outputs:  In-session FeatureCollection + console prints. No Drive export.
+// Depends:  none.
+// ============================================================================
 
 
 // ============================================================

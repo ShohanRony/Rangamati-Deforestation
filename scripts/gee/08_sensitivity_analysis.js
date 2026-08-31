@@ -1,12 +1,22 @@
-// ================================================================
-// RANGAMATI DEFORESTATION MONITORING
-// Script 08: Forest Definition Sensitivity Analysis
-// Tests NDVI thresholds: 0.45 / 0.55 / 0.60
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 08 - Forest-Definition Sensitivity Analysis (PRODUCTION)
+// ----------------------------------------------------------------------------
+// STATUS: production. Preprocessing/harmonisation/classifier setup mirrors
+//   Script 04 exactly (same seed, same block split).
 //
-// Training/holdout split: the study area is divided into 0.1-degree
-// geographic blocks; each block is assigned wholly to train or holdout via
-// a seeded random draw per block (see Script 04 for the full pipeline).
-// ================================================================
+// Purpose:  Re-run the 2023 classification at three NDVI thresholds
+//           (0.45 / 0.55 / 0.60) separating Dense Forest from Degraded
+//           Forest/Jhum, and report the resulting Dense Forest area for
+//           each, to test how sensitive the headline area figures are to
+//           this single operational parameter.
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); ESA/WorldCover/v200/2021;
+//           Landsat 5/7/8 C02 T1_L2 collections.
+// Outputs:  Console prints (Dense Forest area, ha, per threshold).
+// Depends:  none (self-contained; regenerates its own training sample).
+// Params:   seed=42; thresholds=[0.45, 0.55, 0.60].
+// ============================================================================
 
 // ---- STUDY AREA ----
 var studyArea = ee.FeatureCollection(

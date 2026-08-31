@@ -1,10 +1,20 @@
 """
-Olofsson et al. (2014) area-adjusted accuracy assessment.
-Rangamati Deforestation Monitoring — 2023 epoch, corrected spatial-block RF classifier.
+Rangamati Land-Cover Change, 1993-2023
+scripts/python/olofsson_accuracy.py - PRODUCTION
+
+STATUS: production. Computes the area-adjusted overall accuracy (73.17%,
+95% CI 64.34-82.00%) reported for the 2023 map in the manuscript.
+
+Olofsson et al. (2014) area-adjusted accuracy assessment for the 2023
+epoch, corrected spatial-block Random Forest classifier.
 
 Reference: Olofsson, P., Foody, G.M., Herold, M., Stehman, S.V., Woodcock, C.E.,
 Wulder, M.A. (2014). Good practices for estimating area and assessing accuracy
 of land change. Remote Sensing of Environment, 148, 42-57.
+
+Depends on: Script 07 (mapped-area CSV) and Script 06b (validation CSV) -
+see scripts/gee/. Run those in Earth Engine and download their exports
+before running this script.
 
 INPUTS (both loaded from files, nothing hardcoded in this script):
   1. RF_MappedArea_PerClass_2023.csv — mapped class areas (hectares) exported

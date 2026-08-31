@@ -1,9 +1,15 @@
 // ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
 // Script 11 - Dense Forest vs Degraded/Jhum Spectral Separability Diagnostic
-// ============================================================================
+// ----------------------------------------------------------------------------
+// STATUS: production (supplementary diagnostic). Composite-building routine
+//   intentionally differs from the Script 04/05/07/08/09 production
+//   pipeline (see SETUP below) - reported as exploratory/supplementary
+//   evidence in the manuscript, not as a formal accuracy assessment.
+//
 // Purpose: test the second (untested) hypothesis behind the 2003-2008-2018
-// swing reported in Results Section 3.4 - that 2008 shows *worse spectral
-// separability* between Dense Forest and Degraded/Jhum than other epochs,
+// swing reported in the manuscript results - that 2008 shows weaker spectral
+// separability between Dense Forest and Degraded/Jhum than other epochs,
 // which would support "class-boundary instability" as a real contributing
 // cause (as opposed to a confirmed deforestation/regrowth event).
 //
@@ -26,13 +32,24 @@
 // SETUP
 // ---------------------------------------------------------------------------
 // studyArea and the NDVI-composite builder below are ported verbatim from
-// gee-scripts/02_data_pipeline.js (the live script in this account) so this
-// diagnostic uses exactly the same per-epoch composite as the rest of the
-// pipeline: same cloud filter (CLOUD_COVER < 50, scene-level, no per-pixel
-// QA_PIXEL masking - Script 02 itself doesn't apply that either), same
-// Jan-Apr compositing window, same Roy et al. (2016) cross-sensor
-// harmonization for Landsat 8. classifiedAssets below point at the 6
-// RF_Classified_<year> images uploaded as EE assets under this project.
+// scripts/gee/02_data_pipeline.js, NOT from the Script 04/05 production
+// pipeline: scene-level CLOUD_COVER<50 filter (no per-pixel QA_PIXEL
+// masking - Script 02 does not apply that either), same Jan-Apr
+// compositing window, Roy et al. (2016) cross-sensor harmonisation for
+// Landsat 8 (Script 02's coefficient set, not Script 04's - see Script 02's
+// header). classifiedAssets below point at the 6 RF_Classified_<year>
+// images uploaded as EE assets under this project (outputs of Script 05).
+//
+// Inputs:  classifiedAssets (6x RF_Classified_<year>, private EE assets,
+//          Script 05 output); compositeAssets (per-epoch NDVI composite,
+//          built inline per the note above).
+// Outputs: Drive table export - per-epoch M-statistic, class means/stdDevs,
+//          realised sample sizes (DenseForest_Degraded_Separability_
+//          AllEpochs.csv, see data/).
+// Depends: Script 05 (classified maps) must be exported and uploaded as
+//          assets first.
+// Params:  SAMPLES_PER_CLASS=500 (target; realised counts vary - sampling
+//          is restricted to pixels of the target class); SEED=42.
 
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
   .filter(ee.Filter.eq('NAME_2', 'Parbattya Chattagram'))

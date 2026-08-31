@@ -1,7 +1,22 @@
-// ============================================================
-// SCRIPT 06a — Independent Visual Validation Points
-// Complete script — no dependency on Script 04 session
-// ============================================================
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 06a - Independent Visual Validation Points (PRODUCTION)
+// ----------------------------------------------------------------------------
+// STATUS: production. Generates the 200-point reference sample used for
+//   the 2023 area-adjusted accuracy assessment (see manuscript / paper
+//   Section III-D for the sample's provenance caveats).
+//
+// Purpose:  Generate ~200 candidate points (targeted ~40/class) for manual
+//           visual interpretation against high-resolution basemap imagery.
+//           Manual interpretation itself happens outside Earth Engine
+//           (in the Code Editor's point-inspection UI / exported table).
+// Inputs:   projects/crypto-hallway-405211/assets/BGD_adm2 (private asset,
+//           see docs/REPRODUCIBILITY.md); ESA/WorldCover/v200/2021.
+// Outputs:  FeatureCollection of candidate points (export to Drive/Asset
+//           as needed); manually labelled class stored as manual_class.
+// Depends:  none (self-contained; does not require an active Script 04
+//           session).
+// ============================================================================
 
 var studyArea = ee.FeatureCollection('projects/crypto-hallway-405211/assets/BGD_adm2')
   .filter(ee.Filter.eq('NAME_2', 'Parbattya Chattagram'));

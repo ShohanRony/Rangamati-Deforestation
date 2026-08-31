@@ -1,22 +1,24 @@
-// ================================================================
-// RANGAMATI DEFORESTATION MONITORING
-// Script 06b: Re-classify Independent Validation Points
+// ============================================================================
+// Rangamati Land-Cover Change, 1993-2023
+// Script 06b - Re-classify Independent Validation Points (PRODUCTION)
+// ----------------------------------------------------------------------------
+// STATUS: production. Output feeds scripts/python/olofsson_accuracy.py.
 //
-// PURPOSE:
-// The 200-point independent validation set (Script 06a) was manually
-// interpreted against 2023 high-resolution imagery, giving a reference
-// label (manual_class) for each point. This script extracts the
-// corresponding RF-predicted class (rf_class) for each validation point
-// from the classified2023 image, so the confusion matrix / Olofsson
-// area-adjusted accuracy can be computed. The manual reference labels
-// are produced separately in Script 06a and are not touched here.
-//
-// SETUP REQUIRED BEFORE RUNNING:
-// 1. Upload ValidationPoints_200_ForReupload.geojson as a GEE Table asset
-//    (Assets tab > NEW > Table Upload > select the .geojson file).
-// 2. Replace VALIDATION_ASSET below with the resulting asset path
-//    (e.g. 'projects/crypto-hallway-405211/assets/ValidationPoints_200').
-// ================================================================
+// Purpose:  The 200-point validation set (Script 06a) was manually
+//           interpreted against 2023 high-resolution imagery, giving a
+//           reference label (manual_class) per point. This script extracts
+//           the corresponding RF-predicted class (rf_class) for each point
+//           from the 2023 classified map, so the confusion matrix / Olofsson
+//           area-adjusted accuracy can be computed. Manual reference labels
+//           are produced separately in Script 06a and are not touched here.
+// Inputs:   ValidationPoints_200_ForReupload.geojson (data/), uploaded as a
+//           GEE Table asset (Assets tab > NEW > Table Upload); replace
+//           VALIDATION_ASSET below with the resulting asset path, e.g.
+//           'projects/crypto-hallway-405211/assets/ValidationPoints_200'.
+// Outputs:  Table export (CSV) with manual_class and rf_class per point ->
+//           scripts/python/olofsson_accuracy.py input.
+// Depends:  Script 06a (validation-point geometries and manual labels).
+// ============================================================================
 
 var VALIDATION_ASSET = 'projects/crypto-hallway-405211/assets/ValidationPoints_200_Reupload';
 
